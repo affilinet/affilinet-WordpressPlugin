@@ -1,0 +1,244 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Affilinet Advertising & Content Monetization\n"
+"POT-Creation-Date: 2015-06-09 16:36+0100\n"
+"PO-Revision-Date: 2015-06-09 16:36+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: classes/Api.php:27 classes/Api.php:57
+msgid ""
+"Could not connect to Affilinet API. Please recheck your Webservice Password "
+"and Publisher ID"
+msgstr ""
+"Kan niet verbinden met de affilinet API. Controleer je Webservice wachtwoord "
+"en Publisher ID"
+
+#: classes/Api.php:54
+msgid "No data in selected time frame"
+msgstr "Geen data in gekozen tijdsframe"
+
+#: classes/PerformanceAds.php:49 classes/Yieldkit.php:47
+msgid "No publisher ID given"
+msgstr "Geen publisher ID ingevoerd"
+
+#: classes/PerformanceAds.php:52 classes/Yieldkit.php:50
+msgid "No platform  chosen"
+msgstr "Geen platform gekozen"
+
+#: classes/PerformanceAds.php:61
+msgid ""
+"Invalid ad size given. Choose one of \"728x90\",\"300x250\",\"250x250\","
+"\"468x60\",\"160x600\",\"120x600\""
+msgstr ""
+"Ongeldig advertentieformaat ingevoerd. Kies een van de volgenden: \"728x90\","
+"\"300x250\",\"250x250\",\"468x60\",\"160x600\",\"120x600\""
+
+#: classes/Plugin.php:75
+msgid "Start"
+msgstr "Start"
+
+#: classes/Plugin.php:76
+msgid "Settings"
+msgstr "Instellingen"
+
+#: classes/Plugin.php:77 views/signup.php:2
+msgid "Signup"
+msgstr "Registreren"
+
+#: classes/Plugin.php:78 views/reporting.php:2
+msgid "Reporting"
+msgstr "Rapportage"
+
+#: classes/View.php:64 views/reporting.php:116
+msgid "Views"
+msgstr "Views"
+
+#: classes/View.php:65 views/reporting.php:118
+msgid "Clicks"
+msgstr "Clicks"
+
+#: classes/View.php:68
+msgid "Confirmed Commission (€)"
+msgstr "Bevestigde commissie (€)"
+
+#: classes/Widget.php:33
+msgid "Banner size"
+msgstr "Bannerformaat"
+
+#: views/reporting.php:14
+msgid ""
+"This reporting page is deactivated since you did not entered your publisher "
+"web service password on the settings page."
+msgstr ""
+"Deze rapportagepagina is gedeactiveerd omdat je geen wachtwoord hebt "
+"ingevoerd op de ´Instellingen´-pagina"
+
+# This is seperated because of a link:
+# Please provide your [LINK START]webservice password and publisher ID[LINK END]
+#: views/reporting.php:16
+msgid "Please provide your"
+msgstr "Voer je"
+
+# This is seperated because of a link:
+# Please provide your [LINK START]webservice password and publisher
+# ID[LINK END]
+#: views/reporting.php:17
+msgid "webservice password and publisher ID"
+msgstr "Webservice wachtwoord en publisher ID in"
+
+#: views/reporting.php:74
+msgid "Select month"
+msgstr "Selecteer maand"
+
+#: views/reporting.php:90
+msgid "Select year"
+msgstr "Selecteer jaar"
+
+#: views/reporting.php:105
+msgid "Show report"
+msgstr "Laat rapport zien"
+
+#: views/reporting.php:114
+msgid "Date"
+msgstr "Datum"
+
+#: views/reporting.php:120
+msgid "Open SalesLeads"
+msgstr "Open Sales/Leads"
+
+#: views/reporting.php:122
+msgid "Confirmed SalesLeads"
+msgstr "Bevestigde Sales/Leads"
+
+#: views/reporting.php:124
+msgid "Declined SalesLeads"
+msgstr "Afgewezen Sales/Leads"
+
+#: views/reporting.php:126
+msgid "Open Commission"
+msgstr "Open commissie"
+
+#: views/reporting.php:128
+msgid "Confirmed Commission"
+msgstr "Bevestigde commissie"
+
+#: views/reporting.php:185
+msgid "No data for this month"
+msgstr "Geen data voor deze maand"
+
+#: views/reporting.php:195
+msgid "Total sum"
+msgstr "Totaal"
+
+#: views/settings.php:2
+msgid "Affilinet Performance Module"
+msgstr "Affilinet Performance Module"
+
+#: views/settings.php:10 views/signup.php:15
+msgid "affilinet Country Platform"
+msgstr "affilinet landenplatform"
+
+#: views/settings.php:14 views/signup.php:19
+msgid "Germany"
+msgstr "Duitsland"
+
+#: views/settings.php:15 views/signup.php:21
+msgid "United Kingdom"
+msgstr "Verenigd Koninkrijk"
+
+#: views/settings.php:16 views/signup.php:23
+msgid "France"
+msgstr "Frankrijk"
+
+#: views/settings.php:17 views/signup.php:25
+msgid "Netherlands"
+msgstr "Nederland"
+
+#: views/settings.php:18 views/signup.php:27
+msgid "Switzerland"
+msgstr "Zwitserland"
+
+#: views/settings.php:19 views/signup.php:29
+msgid "Austria"
+msgstr "Oostenrijk"
+
+#: views/settings.php:26
+msgid "Publisher ID"
+msgstr "Publisher ID"
+
+#: views/settings.php:31
+msgid "Webservice Password"
+msgstr "Webservice wachtwoord"
+
+#: views/settings.php:141 views/signup.php:46
+msgid "Save"
+msgstr "Opslaan"
+
+#: views/signup.php:7
+msgid "Please choose a platform where you want to sign up"
+msgstr "Kies het platform waarop jij je wilt inschrijven"
+
+#: views/signup.php:43
+msgid "Save Platform"
+msgstr "Platform opslaan"
+
+#: views/start.php:22
+msgid ""
+"https://www.affili.net/htmlcontent/en/Publishermodules/WordPress/Welcome.html"
+msgstr ""
+"https://www.affili.net/htmlcontent/fr/Publishermodules/WordPress/Welcome.html"
+
+#~ msgid "Affilinet WordPress Advertising & Content Monetization Plugin"
+#~ msgstr "affilinet WordPress Advertentie & Content Monetization plugin"
+
+#~ msgid "YieldWord monetization"
+#~ msgstr "YieldWord monetization"
+
+#~ msgid "If checked keywords will be extended with text-ads"
+#~ msgstr "Indien aangevinkt worden trefwoorden uitgebreid met tekst-ads"
+
+#~ msgid "YieldLink replacement"
+#~ msgstr "YieldLink vervanging"
+
+#~ msgid "If checked links will be replaced with affiliate links."
+#~ msgstr "Indien aangevinkt worden links vervangen door affiliate links"
+
+#~ msgid "Yield-Widget"
+#~ msgstr "Yieldwidget"
+
+#~ msgid "Enable Expert Settings"
+#~ msgstr "Expertsettings inschakelen"
+
+#~ msgid "Yield-Widget Position"
+#~ msgstr "Yieldwidget positie"
+
+#~ msgid "Intext + Sidebar"
+#~ msgstr "Intext & Sidebar"
+
+#~ msgid "Intext"
+#~ msgstr "Intext"
+
+#~ msgid "Sidebar"
+#~ msgstr "Sidebar"
+
+#~ msgid "Word distance between placement (number)"
+#~ msgstr "Woordafstand tussen weergaven"
+
+#~ msgid "Max. number of links per page"
+#~ msgstr "Maximaal aantal links per pagina"
+
+#~ msgid "Link Color"
+#~ msgstr "Linkkleur"
