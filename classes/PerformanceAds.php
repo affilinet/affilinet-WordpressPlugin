@@ -78,11 +78,11 @@ class Affilinet_PerformanceAds
         }
 
         $html = '<script language="javascript" type="text/javascript" src="' .
-            'http://' . $viewUrl . '/view.asp?ref=' . $publisherId . '&site=' . $programId . '&type=html&hnb=' . $hnb . '&js=1&subid='.$subId.
+            '//' . $viewUrl . '/view.asp?ref=' . $publisherId . '&site=' . $programId . '&type=html&hnb=' . $hnb . '&js=1&subid='.$subId.
             '"></script><noscript><a href="' .
-            'http://' . $clickUrl . '/click.asp?ref=' . $publisherId . '&site=' . $programId . '&type=b1&bnb=1&subid='.$subId.
+            '//' . $clickUrl . '/click.asp?ref=' . $publisherId . '&site=' . $programId . '&type=b1&bnb=1&subid='.$subId.
             '" target="_blank"><img src="' .
-            'http://' . $viewUrl . '/view.asp?ref=' . $publisherId . '&site=' . $programId . '&b=1&subid='.$subId.
+            '//' . $viewUrl . '/view.asp?ref=' . $publisherId . '&site=' . $programId . '&b=1&subid='.$subId.
             '" border="0"/></a><br /></noscript>';
 
         return $html;

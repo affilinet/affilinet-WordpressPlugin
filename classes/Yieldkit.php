@@ -82,7 +82,7 @@ class Affilinet_Yieldkit
         $ywcolor = str_replace('#','',$ywcolor);
         $hnb = 1;
 
-        $scriptUrl = 'http://' . $viewUrl . '/view.asp?ref=' . $publisherId . '&site=' . $programId . '&type=html&hnb=' . $hnb . '&js=1' .
+        $scriptUrl = '//' . $viewUrl . '/view.asp?ref=' . $publisherId . '&site=' . $programId . '&type=html&hnb=' . $hnb . '&js=1' .
             '&yword='. $yword.
             '&ylink='.$ylink
             .'&ywidget='.$ywidget
@@ -92,7 +92,7 @@ class Affilinet_Yieldkit
             .'&ywcolor='.$ywcolor
             .'&ywcid=content&ywcclass=site-content';
 
-        $noScriptUrl = 'http://' . $viewUrl . '/view.asp?ref=' . $publisherId . '&site=' . $programId . '&type=b1&bnb=1' .
+        $noScriptUrl = '//' . $viewUrl . '/view.asp?ref=' . $publisherId . '&site=' . $programId . '&type=b1&bnb=1' .
             '&yword='. $yword.
             '&ylink='.$ylink
             .'&ywidget='.$ywidget
@@ -107,7 +107,7 @@ class Affilinet_Yieldkit
             .'"></script><noscript><a href="'
             .$noScriptUrl
             .'" target="_blank"><img title="1x1" alt="1x1" src="'
-            .'http://' . $viewUrl . '/view.asp?ref=' . $publisherId . '&site=' . $programId . '&b=1'
+            .'//' . $viewUrl . '/view.asp?ref=' . $publisherId . '&site=' . $programId . '&b=1'
             .'" border="0"/></a><br /></noscript>';
 
         return $html;

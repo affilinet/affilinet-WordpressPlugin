@@ -10,30 +10,27 @@ class Affilinet_Plugin
         add_action('widgets_init', array($this, 'register_widget'));
 
         add_action('admin_enqueue_scripts', array($this, 'admin_enqueue_scripts'));
-        add_action('admin_enqueue_scripts', array('Affilinet_View', 'settings_script') );
 
-        add_action('admin_head', array($this, 'editor_add_buttons'));
+        // the script for settings page is currently not needed
+        //add_action('admin_enqueue_scripts', array('Affilinet_View', 'settings_script') );
+
         add_action('plugins_loaded', array($this, 'load_textdomain'));
-
         add_shortcode('affilinet_performance_ad', array($this, 'performance_ad_shortcode'));
 
         /**
          * Disable YieldKit functionality in Version 1
          *
         if (get_option('affilinet_text_monetization') === '1'
-            ||
-            get_option('affilinet_link_replacement') === '1'
-            ||
-            get_option('affilinet_text_widget') === '1'
+        ||
+        get_option('affilinet_link_replacement') === '1'
+        ||
+        get_option('affilinet_text_widget') === '1'
         ) {
-            add_action('wp_footer', array($this, 'yielkit_code'));
+        add_action('wp_footer', array($this, 'yielkit_code'));
         }
 
          * End Disable YieldKit in Version 1
          */
-        foreach ( array('post.php','post-new.php') as $hook ) {
-            add_action( "admin_head-$hook",array($this, 'affilinet_adminScript') );
-        }
 
     }
 
@@ -86,14 +83,27 @@ class Affilinet_Plugin
     }
 
     /**
-     * Load jquery.flot.js for reporting page
+     * Load Admin scripts
+     * @param $hook string
      */
-    public function admin_enqueue_scripts()
+    public function admin_enqueue_scripts($hook)
     {
-        wp_register_script('flot',      plugin_dir_url( plugin_basename( dirname(__FILE__) )  ).'js/jquery-flot/jquery.flot.js', array('jquery'));
-        wp_register_script('flot.time', plugin_dir_url( plugin_basename( dirname(__FILE__) )  ).'js/jquery-flot/jquery.flot.time.js', array('jquery', 'flot'));
-        wp_enqueue_script('flot');
-        wp_enqueue_script('flot.time');
+        // on post page add the editor button for affilinet plugin
+        if ($hook === 'post.php' || $hook == 'post-new.php') {
+
+            add_action('admin_head', array($this, 'editor_add_buttons'));
+            add_action( "admin_head-$hook",array($this, 'affilinet_adminScript') );
+        }
+
+        // on reporting page add jquery.flot
+        if ($hook === 'affilinet_page_affilinet_reporting') {
+            wp_register_script('flot',      plugin_dir_url( plugin_basename( dirname(__FILE__) )  ).'js/jquery-flot/jquery.flot.js', array('jquery'));
+            wp_register_script('flot.time', plugin_dir_url( plugin_basename( dirname(__FILE__) )  ).'js/jquery-flot/jquery.flot.time.js', array('jquery', 'flot'));
+            wp_enqueue_script('flot');
+            wp_enqueue_script('flot.time');
+        }
+
+
     }
 
     /**
@@ -151,7 +161,7 @@ class Affilinet_Plugin
             };
         </script>
         <!-- TinyMCE Shortcode Plugin -->
-    <?php
+        <?php
     }
 
     public function add_buttons($plugin_array)
@@ -170,7 +180,7 @@ class Affilinet_Plugin
 
     public function yielkit_code()
     {
-       echo Affilinet_Yieldkit::getAdCode();
+        echo Affilinet_Yieldkit::getAdCode();
     }
 
 }

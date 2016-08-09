@@ -72,11 +72,16 @@ class Affilinet_View
                 ], options);
 
         </script>
-    <?php
+        <?php
     }
 
-    public static function settings_script($hook_suffix)
+    public static function settings_script($hook)
     {
+        // this js is only needed on settings page
+        if ($hook !== 'affilinet_page_affilinet_settings') {
+            return;
+        }
+
         include ABSPATH . WPINC . '/version.php'; // include an unmodified $wp_version
         /** @var String $wp_version */
         if ($wp_version < 3.5) {
