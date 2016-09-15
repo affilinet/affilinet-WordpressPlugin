@@ -1,0 +1,52 @@
+# Site
+title: Wordpress Plugin
+meta_description: Documentation and download of the affilinet Wordpress Plugin
+url: https://affilinet.github.io/affilinet-WordpressPlugin
+remote_base_url: http://testodrom.de/pm/ao/devhub
+devhub_url: https://affilinet.github.io
+
+mainmenu: 
+  - title: Start
+    slug: 
+  - title: Documentation
+    slug: documentation
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+permalink: date
+
+# Collections
+collections:
+  # - documentation
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+
+# Default font sizes
+maintext_fontsize: 16px
+maintext_lists_fontsize: 16px
+mainmenu_fontsize: 15px
+sidebar_fontsize: 16px
+table_fontsize: 14px
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  darkbrown: 3b302d 
+  lightbrown: B2A79D
+  lightbrown_background: f7f6f5
+  pink: DE1C44
+  purple: 90005B
+  darkpurple: 53214b
+  red: ff3f2c
+  orange: ec5b0a
+  yellow: EC810A  
+  green: 3D7850
+  lightgreen: 73BA73
+  lighblue: 7882DC
+  blue: 283CC8

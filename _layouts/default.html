@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body id="page-top" class="index" data-spy="scroll" data-target=".scrollspy">
+  <div class="main">
+    {% include nav.html %}
+    <div class="container inner">
+
+      <!-- Store all collections in new collections array -->
+      {% assign collection_labels = "" | split:"|"  %}
+      {% for collection in site.collections %}  
+      {% assign collection_labels = collection_labels | push: collection.label %}
+      {% endfor %}
+
+      {% include breadcrumb.html %}
+      {% include main.html %}
+    </div>
+    {% remote_file_content http://testodrom.de/pm/ao/devhub/template/footer.html %}  
+    {% include js.html %}
+  </div>
+</body>
+</html>
