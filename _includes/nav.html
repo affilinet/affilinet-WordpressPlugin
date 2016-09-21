@@ -10,7 +10,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="http://affilinet.github.io" target="_blank">
-          <img style="width:150px" class="img-responsive" src="{{ site.remote_base_url }}/img/affilinet_logo_rev-out.png" alt="affilinet Logo">
+          <img style="width:150px" class="img-responsive" src="{{ site.remote_base_url }}/assets/img/affilinet_logo_rev-out.png" alt="affilinet Logo">
         </a>
         <h3>{{ site.title }}</h3>
       </div>
@@ -41,9 +41,9 @@
               
               <!-- Distinguish between external and internal links -->
               {% if menu_item.slug contains "http" or menu_item.slug contains "https" %}
-                <a href="{{ menu_item.slug }}">{{ menu_item.title }}</a>
+                <a href="{{ site.url }}/{{ menu_item.slug }}">{{ menu_item.title }}</a>
               {% else %}
-                <a href="/{{ menu_item.slug }}">{{ menu_item.title }}</a>
+                <a href="{{ site.url }}/{{ menu_item.slug }}">{{ menu_item.title }}</a>
               {% endif %}
   
               </li>  
@@ -52,7 +52,7 @@
           <!-- Display Components Menu Item if in development mode -->
           {% if jekyll.environment == "development" %}
             <li class="page-scroll">
-              <a href="/components"><span class="text-primary">Components</span></a> 
+              <a href="{{ site.url }}/components"><span class="text-primary">Components</span></a> 
             </li>
           {% endif %}
 
