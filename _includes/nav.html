@@ -41,9 +41,9 @@
               
               <!-- Distinguish between external and internal links -->
               {% if menu_item.slug contains "http" or menu_item.slug contains "https" %}
-                <a href="{{ site.url }}/{{ menu_item.slug }}">{{ menu_item.title }}</a>
+                <a href="{{ menu_item.slug | prepend:site.baseurl }}">{{ menu_item.title }}</a>
               {% else %}
-                <a href="{{ site.url }}/{{ menu_item.slug }}">{{ menu_item.title }}</a>
+                <a href="{{ menu_item.slug | prepend:site.baseurl }}">{{ menu_item.title }}</a>
               {% endif %}
   
               </li>  
@@ -52,7 +52,7 @@
           <!-- Display Components Menu Item if in development mode -->
           {% if jekyll.environment == "development" %}
             <li class="page-scroll">
-              <a href="{{ site.url }}/components"><span class="text-primary">Components</span></a> 
+              <a href="{{ 'components'| prepend:site.baseurl }}"><span class="text-primary">Components</span></a> 
             </li>
           {% endif %}
 
@@ -62,4 +62,5 @@
     </div>
     <!-- /.container-fluid -->
   </nav>
+  
 
