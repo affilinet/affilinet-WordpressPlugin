@@ -5,6 +5,16 @@ baseurl: /wordpress-plugin/
 remote_base_url: https://affilinet.github.io
 devhub_url: https://affilinet.github.io
 
+# Follow
+twitter: http://twitter.com/affilinet_news
+facebook: https://www.facebook.com/affilinet
+github: http://github.com/affilinet
+
+# Address
+address_street: Sapporobogen 6-8
+address_city: 80637 Munich
+
+# Main menu
 mainmenu: 
   - title: Start
     slug: 
