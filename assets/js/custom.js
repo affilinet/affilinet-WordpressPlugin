@@ -1,5 +1,5 @@
 /*!
- * Custom JS for affilinet Advertiser Mobile SDK
+ * Custom CSS for affilinet Wordpress Plugin
 */
 
 // Highlight the top nav as scrolling occurs
