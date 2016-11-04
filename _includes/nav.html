@@ -41,7 +41,7 @@
               
               <!-- Distinguish between external and internal links -->
               {% if menu_item.slug contains "http" or menu_item.slug contains "https" %}
-                <a href="{{ menu_item.slug | prepend:site.baseurl }}">{{ menu_item.title }}</a>
+                <a target="_blank" href="{{ menu_item.slug }}">{{ menu_item.title }}</a>
               {% else %}
                 <a href="{{ menu_item.slug | prepend:site.baseurl }}">{{ menu_item.title }}</a>
               {% endif %}
