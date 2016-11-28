@@ -98,15 +98,60 @@ class Affilinet_Helper
     /**
      * Helper to display an error message
      */
-    public static function displayAdminError($message)
+    public static function displayHugeAdminMessage($message, $type = 'error', $icon = false)
     {
         ?>
-        <div class="error">
-            <p>
-                <?php echo $message;?>
+        <div class="notice-<?php echo $type?> notice" style="min-height:75px;">
+
+            <?php
+            if ($icon !== false) {
+                switch ($type) {
+                    case'error' : $color = 'rgb(230, 73, 64)';break;
+                    case'warning' : $color = 'rgb(255, 197, 2)';break;
+                    case'success' : $color = 'rgb(84, 190, 100)';break;
+                    case'info' :
+                    default:
+                        $color = 'rgb(23, 175, 218)';
+                }
+                ?>
+                <div style="width: 50px;padding: 10px 20px;display: inline-block;">
+                    <i class="fa <?php echo $icon; ?>" style="font-size: 40px; color: <?php echo $color;?>; position:absolute; margin-top:10px;"></i>
+                </div>
+                <?php
+            }
+            ?>
+
+
+            <p style="display: inline-block;position: absolute; margin-top: 18px;">
+                <strong>
+                    <?php echo $message;?>
+                </strong>
             </p>
+            <div class="clearfix"></div>
         </div>
         <?php
+    }
+
+    /**
+     * @return string
+     */
+    public static function getQualityStandardsLink()
+    {
+        switch ($platformId = get_option('affilinet_platform')) {
+
+            case 7: // AT
+                return 'https://www.affili.net/at/advertiser/plattform/sicherheit-und-transparenz';
+            case 6: // CH
+                return 'https://www.affili.net/ch/advertiser/plattform/sicherheit-und-transparenz';
+            case 2: // UK
+                return 'https://www.affili.net/uk/advertisers-andagencies/platform/quality-management';
+            case 3: // FR
+                return 'https://www.affili.net/fr/annonceurs-etagences/plateforme/securite-et-transparence';
+            case 4: // NL (not implemented)
+            case 1: // DE
+            default :
+                return 'https://www.affili.net/de/advertiser/plattform/sicherheit-und-transparenz';
+        }
     }
 
     /**

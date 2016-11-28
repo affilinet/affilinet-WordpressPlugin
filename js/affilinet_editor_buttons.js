@@ -26,12 +26,11 @@ if (typeof(tinymce) != 'undefined') {
                     });
                 }
 
-                /**
-                 * Placeholders are not editable
-                 */
                 editor.on('click', function (ed, o) {
                     if (ed.target.className == 'affilinet_performance_ad') {
                         ed.stopImmediatePropagation();
+                        var selected = ed.target.title.replace('affilinet_performance_ad size=', '');
+
                         editor.windowManager.open({
                             title: affilinet_mce_variables.choose_size,
                             body: [
@@ -39,21 +38,16 @@ if (typeof(tinymce) != 'undefined') {
                                     type: 'listbox',
                                     name: 'size',
                                     label: 'Size',
-                                    'values': [
-                                        {text: 'Super Banner (728px x 90px)', value: '728x90'},
-                                        {text: 'Medium Rectangle (300px x 250px)', value: '300x250'},
-                                        {text: 'Square Button (250px x 250px)', value: '250x250'},
-                                        {text: 'Fullsize Banner (468px x 60px)', value: '468x60'},
-                                        {text: 'Wide Scyscraper (160px x 600px)', value: '160x600'},
-                                        {text: 'Scyscraper (120px x 600px)', value: '120x600'}
-                                    ]
+                                    values: affilinet_mce_variables.ad_sizes,
+                                    value : selected
+
                                 }
                             ],
                             onsubmit: function (e) {
                                 // Insert content when the window form is submitted
                                 editor.selection.select(ed.target);
                                 editor.selection.setContent('[affilinet_performance_ad size=' + e.data.size + ']');
-                                //ed.stopImmediatePropagation();
+                                ed.stopImmediatePropagation();
                             }
 
                         });
@@ -80,46 +74,24 @@ if (typeof(tinymce) != 'undefined') {
                     event.content = _remove_image(event.content);
                 });
 
+                // clone the object
+                var menu = JSON.parse(JSON.stringify(affilinet_mce_variables.ad_sizes));
+
+                menu.forEach(function(elem){
+                    if (elem.disabled === false) {
+                        elem.onclick =  function(){
+                            editor.insertContent('[affilinet_performance_ad size=' + elem.value.toString() + ']');
+                        }
+                    }
+
+                });
 
                 editor.addButton('affilinet_mce_button', {
                     icon: true,
                     image: affilinet_mce_variables.image_path  + 'affilinet_signet_small.png',
                     type: 'menubutton',
-                    text: 'Affilinet Performance Ads',
-                    menu: [
-                        {
-                            text: 'Super Banner (728px x 90px)',
-                            onclick: function () {
-                                editor.insertContent('[affilinet_performance_ad size=728x90]');
-                            }
-                        },
-                        {
-                            text: 'Medium Rectangle (300px x 250px)',
-                            onclick: function () {
-                                editor.insertContent('[affilinet_performance_ad size=300x250]');
-                            }
-                        }, {
-                            text: 'Square Button (250px x 250px)',
-                            onclick: function () {
-                                editor.insertContent('[affilinet_performance_ad size=250x250]');
-                            }
-                        }, {
-                            text: 'Fullsize Banner (468px x 60px)',
-                            onclick: function () {
-                                editor.insertContent('[affilinet_performance_ad size=468x60]');
-                            }
-                        }, {
-                            text: 'Wide Scyscraper (160px x 600px)',
-                            onclick: function () {
-                                editor.insertContent('[affilinet_performance_ad size=160x600]');
-                            }
-                        }, {
-                            text: 'Scyscraper (120px x 600px)',
-                            onclick: function () {
-                                editor.insertContent('[affilinet_performance_ad size=120x600]');
-                            }
-                        }
-                    ]
+                    text: 'affilinet Performance Ads',
+                    menu: menu
                 });
 
             });
@@ -147,7 +119,7 @@ if (typeof(tinymce) != 'undefined') {
                 createControl: function (n, cm) {
                     if (n == 'affilinet_mce_button') {
                         var mlb = cm.createListBox('affilinet_mce_button', {
-                            title: 'Affilinet Ads',
+                            title: 'affilinet Performance Ads',
                             onselect: function (v) { //Option value as parameter
                                 if (v !== '') {
                                     tinyMCE.activeEditor.execCommand('mceInsertContent', false, '[affilinet_performance_ad size=' + v + ']');
@@ -159,13 +131,11 @@ if (typeof(tinymce) != 'undefined') {
 
                         // Add some values to the list box
 
-                        mlb.add('Super Banner (728px x 90px)', '728x90');
-                        mlb.add('Medium Rectangle (300px x 250px)', '300x250');
-                        mlb.add('Square Button (250px x 250px)', '250x250');
-                        mlb.add('Fullsize Banner (468px x 60px)', '468x60');
-                        mlb.add('Wide Scyscraper (160px x 600px)', '160x600');
-                        mlb.add('Scyscraper (120px x 600px)', '120x600');
-
+                        affilinet_mce_variables.ad_sizes.forEach(function(size){
+                            if (typeof size.value != 'undefined') {
+                                mlb.add(size.text, size.value);
+                            }
+                        });
 
                         // Return the new listbox instance
                         return mlb;
@@ -176,11 +146,11 @@ if (typeof(tinymce) != 'undefined') {
 
                 getInfo: function () {
                     return {
-                        longname: 'Affilinet Shortcode Selector',
+                        longname: 'affilinet Shortcode Selector',
                         author: 'Stefan Gotre',
                         authorurl: 'https://teraone.de',
                         infourl: 'https://teraone.de',
-                        version: "0.1"
+                        version: "0.2"
                     };
                 }
             });

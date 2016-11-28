@@ -42,7 +42,7 @@ class Affilinet_PerformanceAds
 
     /**
      * Return the AdCode for the given size
-     * $size must be one of '728x90','300x250','250x250', '468x60', '160x600', '120x600'
+     * $size must be one of '728x90','300x250','250x250', '468x60', '160x600', '120x600', '168x28', '216x36', '300x50', '320x50' , '300x600'
      * @param $size
      * @return string|void
      */
@@ -99,12 +99,16 @@ class Affilinet_PerformanceAds
         $hnb = array(
             // DE
             1 => array(
-                '728x90' => 1,
+                '728x90'  => 1,
                 '300x250' => 4,
                 '250x250' => 6,
-                '468x60' => 5,
+                '468x60'  => 5,
                 '160x600' => 3,
-                '120x600' => 2
+                '120x600' => 2,
+                '168x28'  => 13,
+                '216x36'  => 14,
+                '300x50'  => 15,
+                '320x50'  => 16
             ),
             // AT
             7 => array(
@@ -114,6 +118,11 @@ class Affilinet_PerformanceAds
                 '468x60' => 3,
                 '160x600' => 4,
                 '120x600' => 5,
+                '168x28'  => 13,  // not yet available in AT
+                '216x36'  => 14,  // not yet available in AT
+                '300x50'  => 15,  // not yet available in AT
+                '320x50'  => 16   // not yet available in AT
+
             ),
             // CH
             6 => array(
@@ -123,6 +132,10 @@ class Affilinet_PerformanceAds
                 '468x60' => 4,
                 '160x600' => 3,
                 '120x600' => 5,
+                '168x28'  => 13,  // not yet available in CH
+                '216x36'  => 14,  // not yet available in CH
+                '300x50'  => 15,  // not yet available in CH
+                '320x50'  => 16   // not yet available in CH
             ),
             // UK
             2 => array(
@@ -131,7 +144,12 @@ class Affilinet_PerformanceAds
                 '250x250' => 6,
                 '468x60' => 1,
                 '160x600' => 4,
-                '120x600' => 5
+                '120x600' => 5,
+                '168x28'  => 13,  // not yet available in UK
+                '216x36'  => 14,  // not yet available in UK
+                '300x50'  => 15,  // not yet available in UK
+                '320x50'  => 16   // not yet available in UK
+
             ),
             // FR
             3 => array(
@@ -140,15 +158,25 @@ class Affilinet_PerformanceAds
                 '250x250' => 6,
                 '468x60' => 1,
                 '160x600' => 4,
-                '120x600' => 5
+                '120x600' => 5,
+                '168x28'  => 13,
+                '216x36'  => 14,
+                '300x50'  => 15,
+                '320x50'  => 16,
+                '300x600'  => 17   // only available in FR
             ),
+            // NL - currently not implemented
             4 => array(
                 '728x90' => 2,
                 '300x250' => 3,
                 '250x250' => 6,
                 '468x60' => 1,
                 '160x600' => 4,
-                '120x600' => 5
+                '120x600' => 5,
+                '168x28'  => 13,
+                '216x36'  => 14,
+                '300x50'  => 15,
+                '320x50'  => 16
             )
         );
         if (isset($hnb[$platformId]) && isset($hnb[$platformId][$size])) {

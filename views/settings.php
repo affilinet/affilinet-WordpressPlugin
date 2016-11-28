@@ -1,11 +1,10 @@
 <div class="wrap">
-    <h2><?php _e( 'Affilinet Performance Ads', 'affilinet' ) ?></h2>
+    <h2><?php _e( 'affilinet Performance Ads', 'affilinet' ) ?></h2>
 
     <?php
 
-    if ( isset($_GET['settings-updated']) && ($_GET['settings-updated']== true ) && $_GET['page'] == 'affilinet_settings') {
-        add_settings_error('affilinet-settings-group', 'settings_updated', __('Settings saved.'), 'updated');
-    }
+    Affilinet_Api::checkPartnershipStatus();
+
 
     if (get_option('affilinet_platform') == 4 ) {
         add_settings_error('affilinet-settings-group', 'invalid_platform', __('The Performance Ads Program will soon be available in Netherlands, too. Please choose another platform so far.'), 'error');
@@ -15,7 +14,11 @@
 
     <form method="post" action="options.php">
         <?php settings_fields( 'affilinet-settings-group' ); ?>
-        <?php do_settings_sections( 'affilinet-settings-group' ); ?>
+        <?php do_settings_sections( 'affilinet-settings-group' );
+
+
+
+        ?>
         <table class="form-table">
             <tr valign="top">
                 <th scope="row"><label for="affilinet_platform"></label>

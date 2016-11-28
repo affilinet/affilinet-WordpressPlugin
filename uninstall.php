@@ -11,6 +11,7 @@ delete_option( 'affilinet_platform' );
 delete_option( 'affilinet_publisher_id' );
 delete_option( 'affilinet_standard_webservice_password' );
 delete_option( 'affilinet_product_data_webservice_password' );
+delete_option( 'affilinet_webservice_login_is_correct' );
 
 delete_option( 'affilinet_text_monetization' );
 delete_option( 'affilinet_link_replacement' );
@@ -31,6 +32,7 @@ unregister_setting( 'affilinet-settings-group', 'affilinet_platform' );
 unregister_setting( 'affilinet-settings-group', 'affilinet_publisher_id' );
 unregister_setting( 'affilinet-settings-group', 'affilinet_standard_webservice_password' );
 unregister_setting( 'affilinet-settings-group', 'affilinet_product_data_webservice_password' );
+unregister_setting( 'affilinet-settings-group', 'affilinet_webservice_login_is_correct' );
 
 unregister_setting('affilinet-settings-group', 'affilinet_text_monetization');
 unregister_setting('affilinet-settings-group', 'affilinet_link_replacement');

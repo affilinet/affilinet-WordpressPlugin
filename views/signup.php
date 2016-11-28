@@ -70,7 +70,7 @@
         $link = 'https://modules.affili.net/Signup/' .
             $programId . '?language=' . $shortLocale .
             '&platform=' . $platformId .
-            '&referrer=WordPress-' . $wp_version . '-LTPlugin';
+            '&referer=WordPress-' . $wp_version . '-LTPlugin';
         ?>
         <style type="text/css" scoped="scoped">
             html {

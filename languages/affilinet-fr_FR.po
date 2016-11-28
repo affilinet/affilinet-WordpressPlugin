@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affilinet Advertising & Content Monetization\n"
-"POT-Creation-Date: 2015-06-09 16:35+0100\n"
-"PO-Revision-Date: 2015-06-09 16:36+0100\n"
+"POT-Creation-Date: 2016-10-25 12:06+0200\n"
+"PO-Revision-Date: 2016-10-25 12:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -18,27 +18,81 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: classes/Api.php:27 classes/Api.php:57
+#: classes/Api.php:35 classes/Api.php:70
 msgid ""
-"Could not connect to Affilinet API. Please recheck your Webservice Password "
+"Could not connect to affilinet API. Please recheck your Webservice Password "
 "and Publisher ID"
 msgstr ""
-"Nous n'avons pas pu nous connecter à l'API. Veuillez vérifier votre ID afflié "
-"et votre mot de passe Webservices."
+"Nous n'avons pas pu nous connecter à l'API. Veuillez vérifier votre ID "
+"afflié et votre mot de passe Webservices."
 
-#: classes/Api.php:54
+#: classes/Api.php:66
 msgid "No data in selected time frame"
 msgstr "Aucune donnée pour la période sélectionnée."
 
-#: classes/PerformanceAds.php:49 classes/Yieldkit.php:47
+#: classes/Api.php:108
+msgid ""
+"Wrong platform selected.<br> It seems like your account is registered to "
+"another country's platform."
+msgstr ""
+"La plate-forme sélectionnée est incorrecte <br> Il semble que votre compte "
+"soit enregistré sur un autre pays."
+
+#: classes/Api.php:114
+msgid ""
+"Great, it looks like you already have a partnership with PerformanceAds! "
+"<br> Feel free to start using the plugin right away!"
+msgstr ""
+"Génial ! Vous êtes déjà inscrit sur PerformanceAds ! <br> Vous pouvez "
+"démarrer immédiatement avec le plugin !"
+
+#: classes/Api.php:120
+msgid ""
+"Please be aware that in order to earn commission for delivering creatives, a "
+"partnership with the PerformanceAds program is required.<br>Please apply <a "
+"target=\"_blank\" href=\"http://publisher.affili.net/Programs/ProgramInfo."
+"aspx?pid="
+msgstr ""
+"Attention, si vous souhaitez toucher des commissions pour l'affichage des "
+"bannières, vous devez avoir un partenariat avec notre programme Performance "
+"Ads. <br> Postulez <a target=\"_blank\" href=\"http://publisher.affili.net/"
+"Programs/ProgramInfo.aspx?pid="
+
+#: classes/Api.php:122
+msgid "\">here</a>. Your partnership will be automatically accepted."
+msgstr "\">dès maintenant</a>, votre partenariat sera automatiquement accepté."
+
+#: classes/Api.php:127
+msgid ""
+"Unfortunately your partnership with PerformanceAds has been cancelled, as "
+"your website does not meet our quality standards. <br> For more information "
+"please visit our <a target=\"_blank\" href=\""
+msgstr ""
+"Malheureusement votre partenariat avec Performance Ads a été refusé car "
+"votre site ne remplit pas encore nos critères de qualité. <br> Pour plus "
+"d'informations, rendez-vous sur notre <a target=\"_blank\" href=\""
+
+#: classes/Api.php:129
+msgid "\">quality standards page.</a>"
+msgstr "\">page dédiée aux critères de qualité.</a>"
+
+#: classes/Api.php:135
+msgid ""
+"Please make sure you have entered the correct PublisherID and Webservice "
+"password."
+msgstr ""
+"Assurez-vous que l'ID affilié et le mot de passe Webservice saisis sont "
+"corrects."
+
+#: classes/PerformanceAds.php:55 classes/Yieldkit.php:52
 msgid "No publisher ID given"
 msgstr "Aucun ID affilié n'est renseigné."
 
-#: classes/PerformanceAds.php:52 classes/Yieldkit.php:50
+#: classes/PerformanceAds.php:58 classes/Yieldkit.php:55
 msgid "No platform  chosen"
 msgstr "Aucune plate-forme n'est sélectionnée."
 
-#: classes/PerformanceAds.php:61
+#: classes/PerformanceAds.php:77
 msgid ""
 "Invalid ad size given. Choose one of \"728x90\",\"300x250\",\"250x250\","
 "\"468x60\",\"160x600\",\"120x600\""
@@ -46,35 +100,47 @@ msgstr ""
 "Le format sélectionné est invalide. Choisissez parmi les formats suivants : "
 "\"728x90\",\"300x250\",\"250x250\",\"468x60\",\"160x600\",\"120x600\""
 
-#: classes/Plugin.php:75
+#: classes/Plugin.php:25
+msgid ""
+"<strong>affilinet Performance Ads:</strong><br> Please make sure you have "
+"entered the correct PublisherID and Webservice password."
+msgstr ""
+"<strong>affilinet Performance Ads:</strong><br> Assurez-vous que l'ID "
+"affilié et le mot de passe Webservice saisis sont corrects."
+
+#: classes/Plugin.php:26
+msgid "Check your settings."
+msgstr "Veuillez vérifier le paramétrage."
+
+#: classes/Plugin.php:68
 msgid "Start"
 msgstr "Début"
 
-#: classes/Plugin.php:76
+#: classes/Plugin.php:69
 msgid "Settings"
 msgstr "Réglages"
 
-#: classes/Plugin.php:77 views/signup.php:2
+#: classes/Plugin.php:73 views/signup.php:2
 msgid "Signup"
 msgstr "S'inscrire"
 
-#: classes/Plugin.php:78 views/reporting.php:2
+#: classes/Plugin.php:76 views/reporting.php:2
 msgid "Reporting"
 msgstr "Rapports"
 
-#: classes/View.php:64 views/reporting.php:116
+#: classes/View.php:65 views/reporting.php:113
 msgid "Views"
 msgstr "Affichages"
 
-#: classes/View.php:65 views/reporting.php:118
+#: classes/View.php:66 views/reporting.php:115
 msgid "Clicks"
 msgstr "Clics"
 
-#: classes/View.php:68
+#: classes/View.php:69
 msgid "Confirmed Commission (€)"
 msgstr "Gains confirmés (€)"
 
-#: classes/Widget.php:33
+#: classes/Widget.php:32
 msgid "Banner size"
 msgstr "Format de bannière"
 
@@ -99,91 +165,93 @@ msgstr "Veuillez renseigner votre"
 msgid "webservice password and publisher ID"
 msgstr "mot de passe Webservices et votre ID affilié."
 
-#: views/reporting.php:74
+#: views/reporting.php:71
 msgid "Select month"
 msgstr "Sélectionner le mois"
 
-#: views/reporting.php:90
+#: views/reporting.php:87
 msgid "Select year"
 msgstr "Sélectionner l'année"
 
-#: views/reporting.php:105
+#: views/reporting.php:102
 msgid "Show report"
 msgstr "Afficher le rapport"
 
-#: views/reporting.php:114
+#: views/reporting.php:111
 msgid "Date"
 msgstr "Date"
 
-#: views/reporting.php:120
+#: views/reporting.php:117
 msgid "Open SalesLeads"
 msgstr "Ventes et leads en attente"
 
-#: views/reporting.php:122
+#: views/reporting.php:119
 msgid "Confirmed SalesLeads"
 msgstr "Ventes et leads confirmés"
 
-#: views/reporting.php:124
+#: views/reporting.php:121
 msgid "Declined SalesLeads"
 msgstr "Ventes et leads annulés"
 
-#: views/reporting.php:126
+#: views/reporting.php:123
 msgid "Open Commission"
 msgstr "Gains en attente"
 
-#: views/reporting.php:128
+#: views/reporting.php:125
 msgid "Confirmed Commission"
 msgstr "Gains confirmés"
 
-#: views/reporting.php:185
+#: views/reporting.php:180
 msgid "No data for this month"
 msgstr "Aucune donnée pour le mois sélectionné."
 
-#: views/reporting.php:195
+#: views/reporting.php:188
 msgid "Total sum"
 msgstr "Total"
 
 #: views/settings.php:2
-msgid "Affilinet Performance Module"
-msgstr "Affilinet Performance Module"
+msgid "affilinet Performance Ads"
+msgstr "affilinet Performance Ads"
 
-#: views/settings.php:10 views/signup.php:15
+#: views/settings.php:10
+msgid ""
+"The Performance Ads Program will soon be available in Netherlands, too. "
+"Please choose another platform so far."
+msgstr ""
+
+#: views/settings.php:25 views/signup.php:15
 msgid "affilinet Country Platform"
 msgstr "Plate-forme affilinet"
 
-#: views/settings.php:14 views/signup.php:19
+#: views/settings.php:29 views/signup.php:19
 msgid "Germany"
 msgstr "Allemagne"
 
-#: views/settings.php:15 views/signup.php:21
+#: views/settings.php:30 views/signup.php:21
 msgid "United Kingdom"
 msgstr "Royaume-Uni"
 
-#: views/settings.php:16 views/signup.php:23
+#: views/settings.php:31 views/signup.php:23
 msgid "France"
 msgstr "France"
 
-#: views/settings.php:17 views/signup.php:25
-msgid "Netherlands"
-msgstr "Pays-Bas"
-
-#: views/settings.php:18 views/signup.php:27
+#: views/settings.php:33 views/signup.php:31
 msgid "Switzerland"
 msgstr "Suisse"
 
-#: views/settings.php:19 views/signup.php:29
+#: views/settings.php:34 views/signup.php:33
 msgid "Austria"
 msgstr "Autriche"
 
-#: views/settings.php:26
+#: views/settings.php:43
 msgid "Publisher ID"
 msgstr "ID affilié"
 
-#: views/settings.php:31
+#: views/settings.php:48 views/settings.php:54
 msgid "Webservice Password"
 msgstr "Mot de passe Webservices"
 
-#: views/settings.php:141 views/signup.php:46
+#: views/settings.php:160 views/signup.php:50
 msgid "Save"
 msgstr "Enregistrer"
 
@@ -191,7 +259,7 @@ msgstr "Enregistrer"
 msgid "Please choose a platform where you want to sign up"
 msgstr "Veuillez sélectionner la plate-forme de votre programme."
 
-#: views/signup.php:43
+#: views/signup.php:47
 msgid "Save Platform"
 msgstr "Enregistrer la plate-forme"
 
@@ -200,6 +268,9 @@ msgid ""
 "https://www.affili.net/htmlcontent/en/Publishermodules/WordPress/Welcome.html"
 msgstr ""
 "https://www.affili.net/htmlcontent/fr/Publishermodules/WordPress/Welcome.html"
+
+#~ msgid "Netherlands"
+#~ msgstr "Pays-Bas"
 
 #~ msgid "Affilinet WordPress Advertising & Content Monetization Plugin"
 #~ msgstr "Module Wordpress affilinet de monétisation de contenu"

@@ -11,28 +11,26 @@ class Affilinet_Plugin
 
         add_action('admin_enqueue_scripts', array($this, 'admin_enqueue_scripts'));
 
-        // the script for settings page is currently not needed
-        //add_action('admin_enqueue_scripts', array('Affilinet_View', 'settings_script') );
-
         add_action('plugins_loaded', array($this, 'load_textdomain'));
         add_shortcode('affilinet_performance_ad', array($this, 'performance_ad_shortcode'));
 
-        /**
-         * Disable YieldKit functionality in Version 1
-         *
-        if (get_option('affilinet_text_monetization') === '1'
-        ||
-        get_option('affilinet_link_replacement') === '1'
-        ||
-        get_option('affilinet_text_widget') === '1'
-        ) {
-        add_action('wp_footer', array($this, 'yielkit_code'));
-        }
-
-         * End Disable YieldKit in Version 1
-         */
+        add_action( 'admin_notices', array( $this, 'admin_notice' ));
 
     }
+
+    function admin_notice() {
+        if (get_option('affilinet_webservice_login_is_correct') === 'false') {
+            ?>
+            <div class="notice notice-warning is-dismissible">
+                <p><?php _e('<strong>affilinet Performance Ads:</strong><br> Please make sure you have entered the correct PublisherID and Webservice password.', 'affilinet' ); ?>
+                <a class="button" href="admin.php?page=affilinet_settings"><?php _e('Check your settings.', 'affilinet');?></a>
+                </p>
+            </div>
+            <?php
+        }
+    }
+
+
 
     /**
      * Register Settings for admin area
@@ -43,6 +41,8 @@ class Affilinet_Plugin
         register_setting('affilinet-settings-group', 'affilinet_publisher_id');
         register_setting('affilinet-settings-group', 'affilinet_standard_webservice_password');
         register_setting('affilinet-settings-group', 'affilinet_product_data_webservice_password');
+
+        register_setting('affilinet-settings-group', 'affilinet_webservice_login_is_correct');
 
         register_setting('affilinet-settings-group', 'affilinet_text_monetization');
         register_setting('affilinet-settings-group', 'affilinet_link_replacement');
@@ -62,16 +62,21 @@ class Affilinet_Plugin
     public function admin_menu()
     {
         // create top level menu
-        add_menu_page('Affilinet', 'Affilinet', 'manage_options', 'affilinet', 'Affilinet_View::start', plugin_dir_url(dirname(__FILE__)).'images/affilinet_icon.png');
+        add_menu_page('affilinet', 'affilinet', 'manage_options', 'affilinet', 'Affilinet_View::start', plugin_dir_url(dirname(__FILE__)).'images/affilinet_icon.png');
 
         // submenu items
         add_submenu_page('affilinet', __('Start', 'affilinet'), __('Start', 'affilinet'), 'manage_options', 'affilinet', 'Affilinet_View::start');
         add_submenu_page('affilinet', __('Settings', 'affilinet'), __('Settings', 'affilinet'), 'manage_options', 'affilinet_settings', 'Affilinet_View::settings');
-        add_submenu_page('affilinet', __('Signup', 'affilinet'), __('Signup', 'affilinet'), 'manage_options', 'affilinet_signup', 'Affilinet_View::signup');
+
+
+        if (get_option('affilinet_webservice_login_is_correct', 'false') === 'false') {
+            add_submenu_page('affilinet', __('Signup', 'affilinet'), __('Signup', 'affilinet'), 'manage_options', 'affilinet_signup', 'Affilinet_View::signup');
+        }
+
         add_submenu_page('affilinet', __('Reporting', 'affilinet'), __('Reporting', 'affilinet'), 'manage_options', 'affilinet_reporting', 'Affilinet_View::reporting');
 
         // options menu
-        add_options_page('Affilinet Settings', 'Affilinet', 'manage_options', 'affilinet_options', 'Affilinet_View::settings');
+        add_options_page('affilinet Settings', 'affilinet', 'manage_options', 'affilinet_options', 'Affilinet_View::settings');
     }
 
     /**
@@ -90,7 +95,6 @@ class Affilinet_Plugin
     {
         // on post page add the editor button for affilinet plugin
         if ($hook === 'post.php' || $hook == 'post-new.php') {
-
             add_action('admin_head', array($this, 'editor_add_buttons'));
             add_action( "admin_head-$hook",array($this, 'affilinet_adminScript') );
         }
@@ -102,6 +106,12 @@ class Affilinet_Plugin
             wp_enqueue_script('flot');
             wp_enqueue_script('flot.time');
         }
+        // on settings page integrate font awesome
+
+        if ($hook == 'affilinet_page_affilinet_settings') {
+            wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+        }
+
 
 
     }
@@ -157,7 +167,9 @@ class Affilinet_Plugin
         <script type='text/javascript'>
             var affilinet_mce_variables = {
                 'image_path': '<?php echo $img; ?>',
-                'choose_size': 'Choose size'
+                'choose_size': 'Choose size',
+                'ad_sizes' : <?php echo Affilinet_Widget::getAllowedSizesJsonForTinyMce();?>
+
             };
         </script>
         <!-- TinyMCE Shortcode Plugin -->

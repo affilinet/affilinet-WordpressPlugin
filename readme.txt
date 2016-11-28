@@ -1,9 +1,9 @@
-=== Affilinet Performance Ads ===
-Contributors: Affilinet, teraone
+=== affilinet Performance Ads ===
+Contributors: affilinet, teraone
 Tags: affiliate marketing, online marketing, performance marketing, marketing, advertisement, advertising, advertise, affilinet, Affiliate, performance, Display, earn money, monetization, monetize, Monetarisierung, performance, Vermarktung, Banner, Geld verdienen, werbeintegration, Werbung
 Requires at least: 3.0.1
-Tested up to: 4.5
-Stable tag: 1.8.2
+Tested up to: 4.6
+Stable tag: 1.8.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,7 +53,7 @@ Profitez des avantages de notre nouvelle technologie publicitaire! Diffusez en t
 You can download the Plugin from Wordpress Plugin repository or install manually
 
 = Install from Wordpress Plugin repository =
-1. Search for 'Affilinet Performance Ads'
+1. Search for 'affilinet Performance Ads'
 2. Click on 'Install' and activate the plugin
 3. Don't forget to enter your Publisher ID
 
@@ -65,7 +65,7 @@ You can download the Plugin from Wordpress Plugin repository or install manually
 
 
 
-After installing the affilinet Performance Ads Plugin, a new "Affilinet" sub-menu will appear in the main WordPress Admin menu.
+After installing the affilinet Performance Ads Plugin, a new "affilinet" sub-menu will appear in the main WordPress Admin menu.
 
 = Required settings =
 1. Click the Settings link and select the affilinet office you will be working with, click save
@@ -74,7 +74,7 @@ After installing the affilinet Performance Ads Plugin, a new "Affilinet" sub-men
 4. Login to the [affilinet publisher platform](https://publisher.affili.net/) using your publisher ID and the password entered into the sign-up form
 5. Use the main navigation in the following steps: Solutions > Web Services > Access data to reach the page where you aquire your Publisher Web Service password
 
-[Screenshot Affilinet Publisher Portal](http://plugins.svn.wordpress.org/affilinet-performance-module/assets/affilinet_Publisher_Portal.png "Affilinet Publisher Portal")
+[Screenshot affilinet Publisher Portal](http://plugins.svn.wordpress.org/affilinet-performance-module/assets/affilinet_Publisher_Portal.png "Affilinet Publisher Portal")
 
 Click the Acquire password button and wait for the token to be loaded as shown [here](http://plugins.svn.wordpress.org/affilinet-performance-module/assets/affilinet_Publisher_Portal_2.png "Affilinet Publisher Portal")
 
@@ -102,8 +102,13 @@ It may take up to 90 minutes for ads to show, additionally all publisher account
 
 == Changelog ==
 
+= 1.8.3 =
+* Release Date: October 24, 2016
+* Enhances Error messages on login page
+* Mobile ad sizes (country platform dependent)
+
 = 1.8.2 =
-* Release Date: June 22, 2016
+* Release Date: July 25, 2016
 * Supporting pages under https
 * Enhanced compatibility with other plugins
 
