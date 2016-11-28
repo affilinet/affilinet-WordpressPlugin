@@ -20,6 +20,8 @@ mainmenu:
     slug: 
   - title: Documentation
     slug: documentation
+  - title: Support
+    slug: https://github.com/affilinet/wordpress-plugin/issues
 
 # Conversion
 markdown: kramdown
