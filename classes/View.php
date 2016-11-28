@@ -66,7 +66,7 @@ class Affilinet_View
                     {data: affilinet_report_data_clicks, label: "<?php _e('Clicks', 'affilinet'); ?>", yaxis: 1},
                     {
                         data: affilinet_report_data_total,
-                        label: "<?php _e('Confirmed Commission (€)', 'affilinet'); ?>",
+                        label: "<?php _e('Open Commission', 'affilinet'); ?>",
                         yaxis: 2
                     }
                 ], options);

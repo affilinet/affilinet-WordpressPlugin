@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affilinet Advertising & Content Monetization\n"
-"POT-Creation-Date: 2016-10-24 16:05+0200\n"
-"PO-Revision-Date: 2016-10-24 16:05+0200\n"
+"POT-Creation-Date: 2016-11-17 17:19+0100\n"
+"PO-Revision-Date: 2016-11-17 17:20+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -19,8 +19,9 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: classes/Api.php:35 classes/Api.php:70
+#, fuzzy
 msgid ""
-"Could not connect to Affilinet API. Please recheck your Webservice Password "
+"Could not connect to affilinet API. Please recheck your Webservice Password "
 "and Publisher ID"
 msgstr ""
 "Kan niet verbinden met de affilinet API. Controleer je Webservice wachtwoord "
@@ -36,13 +37,13 @@ msgid ""
 "another country's platform."
 msgstr ""
 
-#: classes/Api.php:113
+#: classes/Api.php:114
 msgid ""
 "Great, it looks like you already have a partnership with PerformanceAds! "
 "<br> Feel free to start using the plugin right away!"
 msgstr ""
 
-#: classes/Api.php:119
+#: classes/Api.php:120
 msgid ""
 "Please be aware that in order to earn commission for delivering creatives, a "
 "partnership with the PerformanceAds program is required.<br>Please apply <a "
@@ -50,25 +51,25 @@ msgid ""
 "aspx?pid="
 msgstr ""
 
-#: classes/Api.php:121
+#: classes/Api.php:122
 msgid "\">here</a>. Your partnership will be automatically accepted."
 msgstr ""
 
-#: classes/Api.php:126
+#: classes/Api.php:127
 msgid ""
 "Unfortunately your partnership with PerformanceAds has been cancelled, as "
 "your website does not meet our quality standards. <br> For more information "
 "please visit our <a target=\"_blank\" href=\""
 msgstr ""
 
-#: classes/Api.php:128
+#: classes/Api.php:129
 msgid "\">quality standards page.</a>"
 msgstr ""
 
-#: classes/Api.php:134
+#: classes/Api.php:135
 msgid ""
 "Please make sure you have entered the correct PublisherID and Webservice "
-"password. Check your settings."
+"password."
 msgstr ""
 
 #: classes/PerformanceAds.php:55 classes/Yieldkit.php:52
@@ -122,8 +123,8 @@ msgid "Clicks"
 msgstr "Clicks"
 
 #: classes/View.php:69
-msgid "Confirmed Commission (€)"
-msgstr "Bevestigde commissie (€)"
+msgid "Offene Vergütung"
+msgstr "Open Commission"
 
 #: classes/Widget.php:32
 msgid "Banner size"
@@ -196,7 +197,7 @@ msgstr "Totaal"
 
 #: views/settings.php:2
 #, fuzzy
-msgid "Affilinet Performance Ads"
+msgid "affilinet Performance Ads"
 msgstr "Affilinet Performance Module"
 
 #: views/settings.php:10
@@ -254,6 +255,9 @@ msgid ""
 "https://www.affili.net/htmlcontent/en/Publishermodules/WordPress/Welcome.html"
 msgstr ""
 "https://www.affili.net/htmlcontent/fr/Publishermodules/WordPress/Welcome.html"
+
+#~ msgid "Confirmed Commission (€)"
+#~ msgstr "Bevestigde commissie (€)"
 
 #~ msgid "Netherlands"
 #~ msgstr "Nederland"

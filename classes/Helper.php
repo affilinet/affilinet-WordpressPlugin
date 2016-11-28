@@ -144,7 +144,7 @@ class Affilinet_Helper
             case 6: // CH
                 return 'https://www.affili.net/ch/advertiser/plattform/sicherheit-und-transparenz';
             case 2: // UK
-                return 'https://www.affili.net/uk/advertisers-andagencies/platform/quality-management';
+                return 'https://www.affili.net/uk/advertisers-and-agencies/platform/quality-management';
             case 3: // FR
                 return 'https://www.affili.net/fr/annonceurs-et-agences/plateforme/securite-et-transparence';
             case 4: // NL (not implemented)

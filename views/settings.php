@@ -46,7 +46,7 @@
 
             <tr valign="top">
                 <th scope="row"><label for="affilinet_standard_webservice_password"><?php _e('Webservice Password', 'affilinet'); ?></label></th>
-                <td><input type="text"
+                <td><input type="password"
                            style="min-width: 250px;"
                            name="affilinet_standard_webservice_password"
                            id="affilinet_standard_webservice_password"

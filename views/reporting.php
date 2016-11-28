@@ -163,7 +163,7 @@
 
                             $graphData['views'][] = array(strtotime($day->Date) * 1000, $day->CombinedPrograms->Views + $day->PayPerSaleLead->Views ); // multiply with 1000 to trasnsform UNIX timestamp to JS timestamp
                             $graphData['clicks'][] = array(strtotime($day->Date) * 1000, $day->CombinedPrograms->Clicks + $day->PayPerSaleLead->Clicks);
-                            $graphData['total'][] = array(strtotime($day->Date) * 1000, $day->TotalCommission);
+                            $graphData['total'][] = array(strtotime($day->Date) * 1000, $day->TotalOpenCommission);
                         }
 
                         ?>

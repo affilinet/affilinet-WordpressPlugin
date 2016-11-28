@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affilinet Advertising & Content Monetization\n"
-"POT-Creation-Date: 2016-10-25 12:06+0200\n"
-"PO-Revision-Date: 2016-10-25 12:08+0200\n"
+"POT-Creation-Date: 2016-11-17 17:18+0100\n"
+"PO-Revision-Date: 2016-11-17 18:55+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -138,8 +138,9 @@ msgid "Clicks"
 msgstr "Klicks"
 
 #: classes/View.php:69
-msgid "Confirmed Commission (€)"
-msgstr "Bestätigte Provision (€)"
+#, fuzzy
+msgid "Offene Vergütung"
+msgstr "Offene Vergütung"
 
 #: classes/Widget.php:32
 msgid "Banner size"
@@ -270,6 +271,9 @@ msgid ""
 "https://www.affili.net/htmlcontent/en/Publishermodules/WordPress/Welcome.html"
 msgstr ""
 "https://www.affili.net/htmlcontent/de/Publishermodules/WordPress/Start.html"
+
+#~ msgid "Confirmed Commission (€)"
+#~ msgstr "Bestätigte Provision (€)"
 
 #~ msgid "Netherlands"
 #~ msgstr "Niederlande"

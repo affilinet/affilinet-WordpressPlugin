@@ -62,12 +62,12 @@ class Affilinet_Widget extends \WP_Widget
     public static function getAllowedSizesJsonForTinyMce()
     {
         $sizes = self::allowedSizes();
-        $return = [];
+        $return = array();
 
         foreach ($sizes as $category) {
-            $return[] = ['text' => $category['name'], 'disabled' => true];
+            $return[] = array('text' => $category['name'], 'disabled' => true);
             foreach ($category['values'] as $entry) {
-                $return[] = ['text' => $entry['name'], 'value' => $entry['value'], 'disabled' => false];
+                $return[] = array('text' => $entry['name'], 'value' => $entry['value'], 'disabled' => false);
             }
         }
         return json_encode($return, JSON_PRETTY_PRINT);
@@ -79,42 +79,42 @@ class Affilinet_Widget extends \WP_Widget
      */
     private static function allowedSizes()
     {
-        $allowedPlatFormSizes = [
+        $allowedPlatFormSizes = array(
 
             // DE
-            1 => [
-                ['name' => '----- DESKTOP -----', 'values' =>
-                    [
-                        ['value' => '728x90', 'name' => 'Super Banner (728px x 90px)'],
-                        ['value' => '300x250', 'name' => 'Medium Rectangle (300px x 250px)'],
-                        ['value' => '250x250', 'name' => 'Square Button (250px x 250px)'],
-                        ['value' => '468x60', 'name' => 'Fullsize Banner (468px x 60px)'],
-                        ['value' => '160x600', 'name' => 'Wide Scyscraper (160px x 600px)'],
-                        ['value' => '120x600', 'name' => 'Scyscraper (120px x 600px)']
-                    ]
-                ],
-                ['name' => '----- MOBILE -----', 'values' =>
-                    [
-                        ['value' => '168x28', 'name' => 'Feature Phone Medium Banner (168px x 28px)'],
-                        ['value' => '216x36', 'name' => 'Feature Phone Large Banner (216px x 36px)'],
-                        ['value' => '300x50', 'name' => 'Smartphone Banner (300px x 50px)'],
-                        ['value' => '320x50', 'name' => 'Smartphone Wide Banner (320px x 50px)']
-                    ]
-                ]
+            1 => array(
+                array('name' => '----- DESKTOP -----', 'values' =>
+                    array(
+                        array('value' => '728x90', 'name' => 'Super Banner (728px x 90px)'),
+                        array('value' => '300x250', 'name' => 'Medium Rectangle (300px x 250px)'),
+                        array('value' => '250x250', 'name' => 'Square Button (250px x 250px)'),
+                        array('value' => '468x60', 'name' => 'Fullsize Banner (468px x 60px)'),
+                        array('value' => '160x600', 'name' => 'Wide Scyscraper (160px x 600px)'),
+                        array('value' => '120x600', 'name' => 'Scyscraper (120px x 600px)')
+                    )
+                ),
+                array('name' => '----- MOBILE -----', 'values' =>
+                    array(
+                        array('value' => '168x28', 'name' => 'Feature Phone Medium Banner (168px x 28px)'),
+                        array('value' => '216x36', 'name' => 'Feature Phone Large Banner (216px x 36px)'),
+                        array('value' => '300x50', 'name' => 'Smartphone Banner (300px x 50px)'),
+                        array('value' => '320x50', 'name' => 'Smartphone Wide Banner (320px x 50px)')
+                    )
+                )
 
-            ],
+            ),
             // AT
-            7 => [
-                    ['name' => '----- DESKTOP -----', 'values' =>
-                        [
-                            ['value' => '728x90', 'name' => 'Super Banner (728px x 90px)'],
-                            ['value' => '300x250', 'name' => 'Medium Rectangle (300px x 250px)'],
-                            ['value' => '250x250', 'name' => 'Square Button (250px x 250px)'],
-                            ['value' => '468x60', 'name' => 'Fullsize Banner (468px x 60px)'],
-                            ['value' => '160x600', 'name' => 'Wide Scyscraper (160px x 600px)'],
-                            ['value' => '120x600', 'name' => 'Scyscraper (120px x 600px)']
-                        ]
-                    ],
+            7 => array(
+                    array('name' => '----- DESKTOP -----', 'values' =>
+                        array(
+                            array('value' => '728x90', 'name' => 'Super Banner (728px x 90px)'),
+                            array('value' => '300x250', 'name' => 'Medium Rectangle (300px x 250px)'),
+                            array('value' => '250x250', 'name' => 'Square Button (250px x 250px)'),
+                            array('value' => '468x60', 'name' => 'Fullsize Banner (468px x 60px)'),
+                            array('value' => '160x600', 'name' => 'Wide Scyscraper (160px x 600px)'),
+                            array('value' => '120x600', 'name' => 'Scyscraper (120px x 600px)')
+                        )
+                    ),
 
                     /**
                      *  mobile sizes not yet available in AT
@@ -129,19 +129,19 @@ class Affilinet_Widget extends \WP_Widget
                             ['value' => '320x50', 'name' => 'Smartphone Wide Banner (320px x 50px)']
                         ]
                     ]*/
-            ],
+            ),
             // CH
-            6 => [
-                ['name' => '----- DESKTOP -----', 'values' =>
-                    [
-                        ['value' => '728x90', 'name' => 'Super Banner (728px x 90px)'],
-                        ['value' => '300x250', 'name' => 'Medium Rectangle (300px x 250px)'],
-                        ['value' => '250x250', 'name' => 'Square Button (250px x 250px)'],
-                        ['value' => '468x60', 'name' => 'Fullsize Banner (468px x 60px)'],
-                        ['value' => '160x600', 'name' => 'Wide Scyscraper (160px x 600px)'],
-                        ['value' => '120x600', 'name' => 'Scyscraper (120px x 600px)']
-                    ]
-                ],
+            6 => array(
+                array('name' => '----- DESKTOP -----', 'values' =>
+                    array(
+                        array('value' => '728x90', 'name' => 'Super Banner (728px x 90px)'),
+                        array('value' => '300x250', 'name' => 'Medium Rectangle (300px x 250px)'),
+                        array('value' => '250x250', 'name' => 'Square Button (250px x 250px)'),
+                        array('value' => '468x60', 'name' => 'Fullsize Banner (468px x 60px)'),
+                        array('value' => '160x600', 'name' => 'Wide Scyscraper (160px x 600px)'),
+                        array('value' => '120x600', 'name' => 'Scyscraper (120px x 600px)')
+                    )
+                ),
                 /**
                  *  mobile sizes not yet available in CH
                  **/
@@ -156,19 +156,19 @@ class Affilinet_Widget extends \WP_Widget
                 ]
                 */
 
-            ],
+            ),
             // UK
-            2 => [
-                ['name' => '----- DESKTOP -----', 'values' =>
-                    [
-                        ['value' => '728x90', 'name' => 'Super Banner (728px x 90px)'],
-                        ['value' => '300x250', 'name' => 'Medium Rectangle (300px x 250px)'],
-                        ['value' => '250x250', 'name' => 'Square Button (250px x 250px)'],
-                        ['value' => '468x60', 'name' => 'Fullsize Banner (468px x 60px)'],
-                        ['value' => '160x600', 'name' => 'Wide Scyscraper (160px x 600px)'],
-                        ['value' => '120x600', 'name' => 'Scyscraper (120px x 600px)']
-                    ]
-                ],
+            2 => array(
+                array('name' => '----- DESKTOP -----', 'values' =>
+                    array(
+                        array('value' => '728x90', 'name' => 'Super Banner (728px x 90px)'),
+                        array('value' => '300x250', 'name' => 'Medium Rectangle (300px x 250px)'),
+                        array('value' => '250x250', 'name' => 'Square Button (250px x 250px)'),
+                        array('value' => '468x60', 'name' => 'Fullsize Banner (468px x 60px)'),
+                        array('value' => '160x600', 'name' => 'Wide Scyscraper (160px x 600px)'),
+                        array('value' => '120x600', 'name' => 'Scyscraper (120px x 600px)')
+                    )
+                ),
                 /**
                  *  mobile sizes not yet available in UK
                  **/
@@ -181,43 +181,43 @@ class Affilinet_Widget extends \WP_Widget
                         ['value' => '320x50', 'name' => 'Smartphone Wide Banner (320px x 50px)']
                     ]
                 ]*/
-            ],
+            ),
             // FR
-            3 => [
-                ['name' => '----- DESKTOP -----', 'values' =>
-                    [
-                        ['value' => '728x90', 'name' => 'Super Banner (728px x 90px)'],
-                        ['value' => '300x250', 'name' => 'Medium Rectangle (300px x 250px)'],
-                        ['value' => '250x250', 'name' => 'Square Button (250px x 250px)'],
-                        ['value' => '468x60', 'name' => 'Fullsize Banner (468px x 60px)'],
-                        ['value' => '160x600', 'name' => 'Wide Scyscraper (160px x 600px)'],
-                        ['value' => '120x600', 'name' => 'Scyscraper (120px x 600px)'],
-                        ['value' => '300x600', 'name' => 'Half Page (300px x 600px)']
-                    ]
-                ],
-                ['name' => '----- MOBILE -----', 'values' =>
-                    [
-                        ['value' => '168x28', 'name' => 'Feature Phone Medium Banner (168px x 28px)'],
-                        ['value' => '216x36', 'name' => 'Feature Phone Large Banner (216px x 36px)'],
-                        ['value' => '300x50', 'name' => 'Smartphone Banner (300px x 50px)'],
-                        ['value' => '320x50', 'name' => 'Smartphone Wide Banner (320px x 50px)']
-                    ]
-                ]
+            3 => array(
+                array('name' => '----- DESKTOP -----', 'values' =>
+                    array(
+                        array('value' => '728x90', 'name' => 'Super Banner (728px x 90px)'),
+                        array('value' => '300x250', 'name' => 'Medium Rectangle (300px x 250px)'),
+                        array('value' => '250x250', 'name' => 'Square Button (250px x 250px)'),
+                        array('value' => '468x60', 'name' => 'Fullsize Banner (468px x 60px)'),
+                        array('value' => '160x600', 'name' => 'Wide Scyscraper (160px x 600px)'),
+                        array('value' => '120x600', 'name' => 'Scyscraper (120px x 600px)'),
+                        array('value' => '300x600', 'name' => 'Half Page (300px x 600px)')
+                    )
+                ),
+                array('name' => '----- MOBILE -----', 'values' =>
+                    array(
+                        array('value' => '168x28', 'name' => 'Feature Phone Medium Banner (168px x 28px)'),
+                        array('value' => '216x36', 'name' => 'Feature Phone Large Banner (216px x 36px)'),
+                        array('value' => '300x50', 'name' => 'Smartphone Banner (300px x 50px)'),
+                        array('value' => '320x50', 'name' => 'Smartphone Wide Banner (320px x 50px)')
+                    )
+                )
 
-            ],
+            ),
             // NL - currently not implemented
-            4 => [
-                ['name' => '----- DESKTOP -----', 'values' =>
-                    [
-                        ['value' => '728x90', 'name' => 'Super Banner (728px x 90px)'],
-                        ['value' => '300x250', 'name' => 'Medium Rectangle (300px x 250px)'],
-                        ['value' => '250x250', 'name' => 'Square Button (250px x 250px)'],
-                        ['value' => '468x60', 'name' => 'Fullsize Banner (468px x 60px)'],
-                        ['value' => '160x600', 'name' => 'Wide Scyscraper (160px x 600px)'],
-                        ['value' => '120x600', 'name' => 'Scyscraper (120px x 600px)'],
-                        ['value' => '300x600', 'name' => 'Half Page (300px x 600px)']
-                    ]
-                ],
+            4 => array(
+                array('name' => '----- DESKTOP -----', 'values' =>
+                    array(
+                        array('value' => '728x90', 'name' => 'Super Banner (728px x 90px)'),
+                        array('value' => '300x250', 'name' => 'Medium Rectangle (300px x 250px)'),
+                        array('value' => '250x250', 'name' => 'Square Button (250px x 250px)'),
+                        array('value' => '468x60', 'name' => 'Fullsize Banner (468px x 60px)'),
+                        array('value' => '160x600', 'name' => 'Wide Scyscraper (160px x 600px)'),
+                        array('value' => '120x600', 'name' => 'Scyscraper (120px x 600px)'),
+                        array('value' => '300x600', 'name' => 'Half Page (300px x 600px)')
+                    )
+                ),
                 /**
                  *  mobile sizes not yet available in NL
                  **/
@@ -231,8 +231,8 @@ class Affilinet_Widget extends \WP_Widget
                     ]
                 ]
                 */
-            ]
-        ];
+            )
+        );
 
 
         return $allowedPlatFormSizes[(int)get_option('affilinet_platform', 1)];

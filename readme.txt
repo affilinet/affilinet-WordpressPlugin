@@ -3,7 +3,7 @@ Contributors: affilinet, teraone
 Tags: affiliate marketing, online marketing, performance marketing, marketing, advertisement, advertising, advertise, affilinet, Affiliate, performance, Display, earn money, monetization, monetize, Monetarisierung, performance, Vermarktung, Banner, Geld verdienen, werbeintegration, Werbung
 Requires at least: 3.0.1
 Tested up to: 4.6
-Stable tag: 1.8.3
+Stable tag: 1.8.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -101,6 +101,10 @@ It may take up to 90 minutes for ads to show, additionally all publisher account
 
 
 == Changelog ==
+
+= 1.8.4 =
+* Release Date: November 9, 2016
+* PHP 5.3 compatibility
 
 = 1.8.3 =
 * Release Date: October 24, 2016
