@@ -5,7 +5,7 @@ title: Installation
 slug: installation
 
 # position, used for sorting the chapters
-position: 2	
+position: 2
 
 ---
 

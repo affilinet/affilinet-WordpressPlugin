@@ -5,7 +5,7 @@ title: Signup
 slug: signup
 
 # position, used for sorting the chapters
-position: 3	
+position: 3 
 
 ---
 

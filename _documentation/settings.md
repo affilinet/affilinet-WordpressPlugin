@@ -5,7 +5,7 @@ title: Settings
 slug: settings
 
 # position, used for sorting the chapters
-position: 4	
+position: 4
 
 ---
 
