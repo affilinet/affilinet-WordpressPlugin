@@ -2,7 +2,7 @@
 # chapter headline title
 title: Integration
 # chapter url slug
-slug: Integration
+slug: integration
 # chapter sections, also used for building the sidebar navigation
 sections: 
   - slug: integration-pagepanelorpagefooter
