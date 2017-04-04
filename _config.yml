@@ -3,7 +3,7 @@ title: Wordpress Plugin
 meta_description: Documentation and download of the affilinet Wordpress Plugin
 baseurl: /wordpress-plugin/
 remote_base_url: https://affilinet.github.io
-devhub_url: https://affilinet.github.io
+devhub_url: http://developer.affili.net
 
 # Follow
 twitter: http://twitter.com/affilinet_news
