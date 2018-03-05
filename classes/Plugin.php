@@ -10,20 +10,22 @@ class Affilinet_Plugin
         add_action('widgets_init', array($this, 'register_widget'));
 
         add_action('admin_enqueue_scripts', array($this, 'admin_enqueue_scripts'));
+        add_action('wp_head', array($this, 'enqueue_bidding_script'));
 
         add_action('plugins_loaded', array($this, 'load_textdomain'));
         add_shortcode('affilinet_performance_ad', array($this, 'performance_ad_shortcode'));
 
         add_action( 'admin_notices', array( $this, 'admin_notice' ));
 
+	    add_filter( 'plugin_action_links_' .plugin_basename(AFFILINET_PLUGIN_FILE ), array( $this, 'plugin_add_settings_link' ) );
     }
 
     function admin_notice() {
         if (get_option('affilinet_webservice_login_is_correct') === 'false') {
             ?>
             <div class="notice notice-warning is-dismissible">
-                <p><?php _e('<strong>affilinet Performance Ads:</strong><br> Please make sure you have entered the correct PublisherID and Webservice password.', 'affilinet' ); ?>
-                <a class="button" href="admin.php?page=affilinet_settings"><?php _e('Check your settings.', 'affilinet');?></a>
+                <p><?php _e('<strong>affilinet Performance Ads:</strong><br> Please make sure you have entered the correct PublisherID and Webservice password.', 'affilinet-performance-module' ); ?>
+                <a class="button" href="admin.php?page=affilinet_settings"><?php _e('Check your settings.', 'affilinet-performance-module');?></a>
                 </p>
             </div>
             <?php
@@ -56,6 +58,7 @@ class Affilinet_Plugin
 
     }
 
+
     /**
      * Create the admin Menu
      */
@@ -65,19 +68,28 @@ class Affilinet_Plugin
         add_menu_page('affilinet', 'affilinet', 'manage_options', 'affilinet', 'Affilinet_View::start', plugin_dir_url(dirname(__FILE__)).'images/affilinet_icon.png');
 
         // submenu items
-        add_submenu_page('affilinet', __('Start', 'affilinet'), __('Start', 'affilinet'), 'manage_options', 'affilinet', 'Affilinet_View::start');
-        add_submenu_page('affilinet', __('Settings', 'affilinet'), __('Settings', 'affilinet'), 'manage_options', 'affilinet_settings', 'Affilinet_View::settings');
+        add_submenu_page('affilinet', __('Start', 'affilinet-performance-module'), __('Start', 'affilinet-performance-module'), 'manage_options', 'affilinet', 'Affilinet_View::start');
+        add_submenu_page('affilinet', __('Settings', 'affilinet-performance-module'), __('Settings', 'affilinet-performance-module'), 'manage_options', 'affilinet_settings', 'Affilinet_View::settings');
 
 
         if (get_option('affilinet_webservice_login_is_correct', 'false') === 'false') {
-            add_submenu_page('affilinet', __('Signup', 'affilinet'), __('Signup', 'affilinet'), 'manage_options', 'affilinet_signup', 'Affilinet_View::signup');
+            add_submenu_page('affilinet', __('Signup', 'affilinet-performance-module'), __('Signup', 'affilinet-performance-module'), 'manage_options', 'affilinet_signup', 'Affilinet_View::signup');
         }
 
-        add_submenu_page('affilinet', __('Reporting', 'affilinet'), __('Reporting', 'affilinet'), 'manage_options', 'affilinet_reporting', 'Affilinet_View::reporting');
+        add_submenu_page('affilinet', __('Reporting', 'affilinet-performance-module'), __('Reporting', 'affilinet-performance-module'), 'manage_options', 'affilinet_reporting', 'Affilinet_View::reporting');
 
         // options menu
-        add_options_page('affilinet Settings', 'affilinet', 'manage_options', 'affilinet_options', 'Affilinet_View::settings');
+        add_options_page('affilinet Settings', 'affilinet Perf. Ads', 'manage_options', 'affilinet_options', 'Affilinet_View::settings');
     }
+
+
+
+	public function plugin_add_settings_link( $links ) {
+
+		$settings_link = '<a href="' . admin_url( 'options-general.php?page=affilinet_options' ) . '">' . __( 'Settings', 'affilinet-performance-module' ) . '</a>';
+		array_push( $links, $settings_link );
+		return $links;
+	}
 
     /**
      * Register the widget
@@ -106,14 +118,45 @@ class Affilinet_Plugin
             wp_enqueue_script('flot');
             wp_enqueue_script('flot.time');
         }
-        // on settings page integrate font awesome
+    }
 
-        if ($hook == 'affilinet_page_affilinet_settings') {
-            wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-        }
+    public function enqueue_bidding_script()
+    {
+
+	    switch ($platformId = get_option('affilinet_platform')) {
+
+		    case 7: // AT
+			    $country = 'at';
+			    break;
+		    case 6: // CH
+			    $country = 'ch';
+			    break;
+		    case 1: // DE
+			    $country = 'de';
+			    break;
+		    case 3: // FR
+			    $country = 'fr';
+			    break;
+		    case 2: // UK (prebidding not implemented)
+		    case 4: // NL (prebidding not implemented)
+		    default :
+			    return;
+	    }
+
+	    $publisherId = get_option('affilinet_publisher_id');
+	    if ($publisherId == null) return;
 
 
+	    echo '<!-- affilinet prebidding script --><script language="javascript" type="text/javascript">'
+             . 'var affnetpbjsConfig = { "' . $country . '": { "publisherId" : "' . $publisherId . '" }};</script>';
+	    $link = array(
+		    'de' => 'https://html-links.com/banners/9192/js/affnetpbjs_de.min.js',
+		    'at' => 'https://html-links.com/banners/12376/js/affnetpbjs_at.min.js',
+		    'ch' => 'https://html-links.com/banners/12252/js/affnetpbjs_ch.min.js',
+		    'fr' => 'https://html-links.com/banners/12751/js/affnetpbjs_fr.min.js',
+	    );
 
+	    echo '<script src="' . $link[ $country ] . '"></script>';
     }
 
     /**
@@ -137,7 +180,7 @@ class Affilinet_Plugin
      */
     public function load_textdomain()
     {
-        load_plugin_textdomain( 'affilinet', false, dirname(dirname( plugin_basename( __FILE__ ) )) . '/languages' );
+        load_plugin_textdomain( 'affilinet-performance-module', false, dirname(dirname( plugin_basename( __FILE__ ) )) . '/languages' );
     }
 
     /**

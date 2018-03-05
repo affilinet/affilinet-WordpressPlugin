@@ -115,7 +115,7 @@ class Affilinet_Helper
                 }
                 ?>
                 <div style="width: 50px;padding: 10px 20px;display: inline-block;">
-                    <i class="fa <?php echo $icon; ?>" style="font-size: 40px; color: <?php echo $color;?>; position:absolute; margin-top:10px;"></i>
+                    <i class="dashicons <?php echo $icon; ?>" style="font-size: 40px; color: <?php echo $color;?>; position:absolute; margin-top:10px;"></i>
                 </div>
                 <?php
             }

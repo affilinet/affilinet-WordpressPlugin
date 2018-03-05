@@ -1,10 +1,10 @@
 <div class="wrap">
-    <h2><?php _e('Signup', 'affilinet') ?></h2>
+    <h2><?php _e('Signup', 'affilinet-performance-module') ?></h2>
     <?php
     if (get_option('affilinet_platform') === false) {
         // No Platform has been setup
         ?>
-        <p><?php _e('Please choose a platform where you want to sign up', 'affilinet') ?></p>
+        <p><?php _e('Please choose a platform where you want to sign up', 'affilinet-performance-module') ?></p>
 
         <form method="post" action="options.php">
             <?php settings_fields('affilinet-settings-group'); ?>
@@ -12,25 +12,25 @@
             <table class="form-table">
                 <tr valign="top">
                     <th scope="row"><label
-                            for="affilinet_platform"><?php _e('affilinet Country Platform', 'affilinet') ?></label></th>
+                            for="affilinet_platform"><?php _e('affilinet Country Platform', 'affilinet-performance-module') ?></label></th>
                     <td>
                         <select name="affilinet_platform" id="affilinet_platform">
                             <option <?php selected('1', get_option('affilinet_platform')); ?> value="1">
-                                affilinet <?php _e('Germany', 'affilinet'); ?></option>
+                                affilinet <?php _e('Germany', 'affilinet-performance-module'); ?></option>
                             <option <?php selected('2', get_option('affilinet_platform')); ?> value="2">
-                                affilinet <?php _e('United Kingdom', 'affilinet'); ?></option>
+                                affilinet <?php _e('United Kingdom', 'affilinet-performance-module'); ?></option>
                             <option <?php selected('3', get_option('affilinet_platform')); ?> value="3">
-                                affilinet <?php _e('France', 'affilinet'); ?></option>
+                                affilinet <?php _e('France', 'affilinet-performance-module'); ?></option>
 
                             <?php /*
                             <option <?php selected('4', get_option('affilinet_platform')); ?> value="4">
-                                affilinet <?php _e('Netherlands', 'affilinet'); ?></option>
+                                affilinet <?php _e('Netherlands', 'affilinet-performance-module'); ?></option>
                             */ ?>
 
                             <option <?php selected('6', get_option('affilinet_platform')); ?> value="6">
-                                affilinet <?php _e('Switzerland', 'affilinet'); ?></option>
+                                affilinet <?php _e('Switzerland', 'affilinet-performance-module'); ?></option>
                             <option <?php selected('7', get_option('affilinet_platform')); ?> value="7">
-                                affilinet <?php _e('Austria', 'affilinet'); ?></option>
+                                affilinet <?php _e('Austria', 'affilinet-performance-module'); ?></option>
 
                         </select>
                     </td>
@@ -44,10 +44,10 @@
             <?php
 
             if (function_exists('submit_button')) {
-                submit_button(__('Save Platform', 'affilinet'));
+                submit_button(__('Save Platform', 'affilinet-performance-module'));
             } else {
                 ?>?>
-                <button type="submit"><?php _e('Save', 'affilinet'); ?></button><?php
+                <button type="submit"><?php _e('Save', 'affilinet-performance-module'); ?></button><?php
             }
 
             ?>

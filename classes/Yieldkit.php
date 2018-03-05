@@ -49,10 +49,10 @@ class Affilinet_Yieldkit
         $platformId = get_option('affilinet_platform');
 
         if ($publisherId === false || $publisherId === '') {
-            return __('No publisher ID given', 'affilinet');
+            return __('No publisher ID given', 'affilinet-performance-module');
         }
         if ($platformId === false || $platformId === '') {
-            return __('No platform  chosen', 'affilinet');
+            return __('No platform  chosen', 'affilinet-performance-module');
         }
 
         $programId = self::getProgramIdByPlatform($platformId);

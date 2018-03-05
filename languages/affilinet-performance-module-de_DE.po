@@ -1,0 +1,391 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Affilinet Advertising & Content Monetization\n"
+"POT-Creation-Date: 2016-11-17 17:18+0100\n"
+"PO-Revision-Date: 2016-11-17 18:55+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: classes/Api.php:35 classes/Api.php:70
+msgid ""
+"Could not connect to affilinet API. Please recheck your Webservice Password "
+"and Publisher ID"
+msgstr ""
+"Verbindungsfehler: Bitte überprüfen Sie Ihr Webservice Passwort und Ihre "
+"Publisher ID."
+
+#: classes/Api.php:66
+msgid "No data in selected time frame"
+msgstr "Keine Daten im ausgewählten Zeitraum"
+
+#: classes/Api.php:108
+msgid ""
+"Wrong platform selected.<br> It seems like your account is registered to "
+"another country's platform."
+msgstr ""
+"Ungültige Plattform <br> Es scheint, dass Ihr affilinet-Konto in einem "
+"anderen Land registriert ist."
+
+#: classes/Api.php:114
+msgid ""
+"Great, it looks like you already have a partnership with PerformanceAds! "
+"<br> Feel free to start using the plugin right away!"
+msgstr ""
+"Toll, es sieht so aus, als ob Sie bereits eine Partnerschaft mit "
+"PerformanceAds haben! <br> Sie können gerne mit dem Plugin sofort loslegen!"
+
+#: classes/Api.php:120
+msgid ""
+"Please be aware that in order to earn commission for delivering creatives, a "
+"partnership with the PerformanceAds program is required.<br>Please apply <a "
+"target=\"_blank\" href=\"http://publisher.affili.net/Programs/ProgramInfo."
+"aspx?pid="
+msgstr ""
+"Bitte beachten Sie, dass um die Auszahlung von Provisionen für die "
+"Auslieferung von Creatives bekommen zu können, eine Partnerschaft mit dem "
+"PerformanceAds-Programm erforderlich ist. <br> Bitte bewerben Sie sich <a "
+"target=\"_blank\" href=\"http://publisher.affili.net/Programs/ProgramInfo."
+"aspx?pid="
+
+#: classes/Api.php:122
+msgid "\">here</a>. Your partnership will be automatically accepted."
+msgstr "\">hier</a>. Ihre Partnerschaft wird automatisch angenommen."
+
+#: classes/Api.php:127
+msgid ""
+"Unfortunately your partnership with PerformanceAds has been cancelled, as "
+"your website does not meet our quality standards. <br> For more information "
+"please visit our <a target=\"_blank\" href=\""
+msgstr ""
+"Leider wurde Ihre Partnerschaft mit PerformanceAds storniert, da Ihre "
+"Website unseren Qualitätsstandards nicht entspricht. <br> Für weitere "
+"Informationen besuchen Sie bitte unsere <a target=\"_blank\" href=\""
+
+#: classes/Api.php:129
+msgid "\">quality standards page.</a>"
+msgstr "\">Qualitätsstandards-Seite.</a>"
+
+#: classes/Api.php:135
+msgid ""
+"Please make sure you have entered the correct PublisherID and Webservice "
+"password."
+msgstr ""
+"Bitte überprüfen Sie die hinterlegte Publisher ID und das Webservice "
+"Passwort."
+
+#: classes/PerformanceAds.php:55 classes/Yieldkit.php:52
+msgid "No publisher ID given"
+msgstr "Keine Publisher ID angegeben"
+
+#: classes/PerformanceAds.php:58 classes/Yieldkit.php:55
+msgid "No platform  chosen"
+msgstr "Keine Länder Platform gewählt"
+
+#: classes/PerformanceAds.php:77
+msgid ""
+"Invalid ad size given. Choose one of \"728x90\",\"300x250\",\"250x250\","
+"\"468x60\",\"160x600\",\"120x600\""
+msgstr ""
+"Ungültiges Banner Format. Wählen Sie zwischen aus \"728x90\",\"300x250\","
+"\"250x250\",\"468x60\",\"160x600\",\"120x600\""
+
+#: classes/Plugin.php:25
+msgid ""
+"<strong>affilinet Performance Ads:</strong><br> Please make sure you have "
+"entered the correct PublisherID and Webservice password."
+msgstr ""
+"<strong>affilinet Performance Ads:</strong><br>Bitte überprüfen Sie die "
+"hinterlegte Publisher ID und das Webservice Passwort."
+
+#: classes/Plugin.php:26
+msgid "Check your settings."
+msgstr "Einstellungen prüfen"
+
+#: classes/Plugin.php:68
+msgid "Start"
+msgstr "Start"
+
+#: classes/Plugin.php:69
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: classes/Plugin.php:73 views/signup.php:2
+msgid "Signup"
+msgstr "Registrieren"
+
+#: classes/Plugin.php:76 views/reporting.php:2
+msgid "Reporting"
+msgstr "Reports"
+
+#: classes/View.php:65 views/reporting.php:113
+msgid "Views"
+msgstr "Views"
+
+#: classes/View.php:66 views/reporting.php:115
+msgid "Clicks"
+msgstr "Klicks"
+
+#: classes/View.php:69
+#, fuzzy
+msgid "Offene Vergütung"
+msgstr "Offene Vergütung"
+
+#: classes/Widget.php:32
+msgid "Banner size"
+msgstr "Banner Format"
+
+#: views/reporting.php:14
+msgid ""
+"This reporting page is deactivated since you did not entered your publisher "
+"web service password on the settings page."
+msgstr ""
+"Die Reports sind deaktiviert, da Sie noch kein Webservice Passwort "
+"hinterlegt haben."
+
+# This is seperated because of a link:
+# Please provide your [LINK START]webservice password and publisher ID[LINK END]
+#: views/reporting.php:16
+msgid "Please provide your"
+msgstr "Bitte geben Sie Ihr"
+
+# This is seperated because of a link:
+# Please provide your [LINK START]webservice password and publisher
+# ID[LINK END]
+#: views/reporting.php:17
+msgid "webservice password and publisher ID"
+msgstr "Webservice Passwort und Ihre Publisher ID an"
+
+#: views/reporting.php:71
+msgid "Select month"
+msgstr "Monat wählen"
+
+#: views/reporting.php:87
+msgid "Select year"
+msgstr "Jahr wählen"
+
+#: views/reporting.php:102
+msgid "Show report"
+msgstr "Report anzeigen"
+
+#: views/reporting.php:111
+msgid "Date"
+msgstr "Datum"
+
+#: views/reporting.php:117
+msgid "Open SalesLeads"
+msgstr "Offene Sales/Leads"
+
+#: views/reporting.php:119
+msgid "Confirmed SalesLeads"
+msgstr "Bestätigte Sales/Leads"
+
+#: views/reporting.php:121
+msgid "Declined SalesLeads"
+msgstr "Abgelehnte Sales/Leads"
+
+#: views/reporting.php:123
+msgid "Open Commission"
+msgstr "Offene Vergütung"
+
+#: views/reporting.php:125
+msgid "Confirmed Commission"
+msgstr "Bestätigte Vergütung"
+
+#: views/reporting.php:180
+msgid "No data for this month"
+msgstr "Keine Daten im ausgewählten Zeitraum"
+
+#: views/reporting.php:188
+msgid "Total sum"
+msgstr "Gesamt"
+
+#: views/settings.php:2
+msgid "affilinet Performance Ads"
+msgstr "affilinet Performance Ads"
+
+#: views/settings.php:10
+msgid ""
+"The Performance Ads Program will soon be available in Netherlands, too. "
+"Please choose another platform so far."
+msgstr ""
+
+#: views/settings.php:25 views/signup.php:15
+msgid "affilinet Country Platform"
+msgstr "affilinet Länder Platform"
+
+#: views/settings.php:29 views/signup.php:19
+msgid "Germany"
+msgstr "Deutschland"
+
+#: views/settings.php:30 views/signup.php:21
+msgid "United Kingdom"
+msgstr "Vereinigtes Königreich"
+
+#: views/settings.php:31 views/signup.php:23
+msgid "France"
+msgstr "Frankreich"
+
+#: views/settings.php:33 views/signup.php:31
+msgid "Switzerland"
+msgstr "Schweiz"
+
+#: views/settings.php:34 views/signup.php:33
+msgid "Austria"
+msgstr "Österreich"
+
+#: views/settings.php:43
+msgid "Publisher ID"
+msgstr "Publisher ID"
+
+#: views/settings.php:48 views/settings.php:54
+msgid "Webservice Password"
+msgstr "Webservice Passwort"
+
+#: views/settings.php:160 views/signup.php:50
+msgid "Save"
+msgstr "Speichern"
+
+#: views/signup.php:7
+msgid "Please choose a platform where you want to sign up"
+msgstr ""
+"Bitte wählen Sie eine Länder Plattform für die Sie sich registrieren möchten"
+
+#: views/signup.php:47
+msgid "Save Platform"
+msgstr "Länder Plattform festlegen"
+
+#: views/start.php:22
+msgid ""
+"https://www.affili.net/htmlcontent/en/Publishermodules/WordPress/Welcome.html"
+msgstr ""
+"https://www.affili.net/htmlcontent/de/Publishermodules/WordPress/Start.html"
+
+#~ msgid "Confirmed Commission (€)"
+#~ msgstr "Bestätigte Provision (€)"
+
+#~ msgid "Netherlands"
+#~ msgstr "Niederlande"
+
+#~ msgid ""
+#~ "This page offers an introduction about the affilinet Performance Module"
+#~ msgstr ""
+#~ "Diese Seite bietet Ihnen einführende Informationen zum affilinet "
+#~ "Performance Modul"
+
+#~ msgid ""
+#~ "The affilinet Performance Module enables you to serve your users real "
+#~ "time, targeted ads. Integrate the\n"
+#~ "    adequate ad-format via drag and drop into your corresponding page "
+#~ "area.\n"
+#~ "<br>\n"
+#~ "<br>\n"
+#~ "\n"
+#~ "    Log in with your affilinet publisher id and password under settings "
+#~ "and get started! If you don’t have a\n"
+#~ "    publisher account yet, you can apply for an affilinet account under "
+#~ "the navigation point “Signup”. For further\n"
+#~ "    information about plugin functionality, please review our\n"
+#~ "    <a target=\"_blank\" href=\"http://www.affili.net/htmlcontent/en/"
+#~ "Publishermodules/WordPress/Documentation_Publisher_WordPress_v1.0.pdf"
+#~ "\">Performance Module documentation</a>.\n"
+#~ "    <br>\n"
+#~ "    <br>\n"
+#~ "    Under the navigation point “Reporting” you get an overview of your "
+#~ "transactions as well as the generated views, clicks and the corresponding "
+#~ "commission.\n"
+#~ "    <br />\n"
+#~ "    <br />\n"
+#~ "    You can get the necessary webservice data within your account in the "
+#~ "<a href=\"https://publisher.affili.net/Login/NewLogin.aspx\" target="
+#~ "\"_blank\">publisher portal</a>.\n"
+#~ "    <br />\n"
+#~ "    <br />\n"
+#~ "    If you have further questions about supported WordPress versions, "
+#~ "please contact our technical support under <a href=\"mailto:"
+#~ "wpplugin@affili.net\">wpplugin@affili.net</a>.\n"
+#~ "    <hr>\n"
+#~ msgstr ""
+#~ "Das affilinet Performance Modul ermöglicht es Ihnen, <b>Werbemittel "
+#~ "gezielt an Ihre Kunden auszuspielen</b>.\n"
+#~ "    Integrieren Sie das passende Werbemittelformat einfach per \"Drag & "
+#~ "Drop\" in den gewünschten Bereich Ihrer Seite.\n"
+#~ "<br>\n"
+#~ "<br>\n"
+#~ "Melden Sie sich unter \"Einstellungen\" einfach mit Ihrer Publisher ID "
+#~ "und Ihrem dazugehörigen Webservice Passwort an\n"
+#~ "    und starten Sie los! Sollten Sie noch keinen Publisher Account bei "
+#~ "affilinet haben, können Sie sich unter dem Menüpunkt\n"
+#~ "    \"Registrieren\" einfach bei affilinet als Publisher anmelden.\n"
+#~ "    Weitere Informationen zur Funktionalität des Plugins finden Sie in "
+#~ "unserer <a target=\"_blank\" href=\"http://www.affili.net/htmlcontent/en/"
+#~ "Publishermodules/WordPress/Documentation_Publisher_WordPress_v1.0.pdf"
+#~ "\">Performance Modul Dokumentation</a>.\n"
+#~ "<br>\n"
+#~ "<br>\n"
+#~ "Unter dem Menüpunkt Reports bekommen Sie einen Überblick über Ihre "
+#~ "generierten Transaktionen, sowie Views, Klicks und\n"
+#~ "    die entsprechende Vergütung.\n"
+#~ "    <br>\n"
+#~ "    <br>\n"
+#~ "Sie finden Ihr Webservice Passwort im <a href=\"https://publisher.affili."
+#~ "net/Login/NewLogin.aspx\" target=\"_blank\">affilinet Publisher Portal</"
+#~ "a>\n"
+#~ "    <br>\n"
+#~ "    <br>\n"
+#~ "    Sollten Sie Fragen haben kontaktieren Sie unseren technischen Support "
+#~ "unter <a href=\"mailto:wpplugin@affili.net\">wpplugin@affili.net</a>\n"
+#~ "    <hr>\n"
+
+#~ msgid "Affilinet WordPress Advertising & Content Monetization Plugin"
+#~ msgstr "Affilinet WordPress Advertising & Content Monetization Plugin"
+
+#~ msgid "YieldWord monetization"
+#~ msgstr "YieldWord monetization"
+
+#~ msgid "If checked keywords will be extended with text-ads"
+#~ msgstr "Erweitert Schlüsselwörter durch Text-Anzeigen."
+
+#~ msgid "YieldLink replacement"
+#~ msgstr "YieldLink replacement"
+
+#~ msgid "If checked links will be replaced with affiliate links."
+#~ msgstr "Ersetzt normale Links durch Affiliate-Links."
+
+#~ msgid "Yield-Widget"
+#~ msgstr "Yield-Widget"
+
+#~ msgid "Enable Expert Settings"
+#~ msgstr "Experten-Einstellungen"
+
+#~ msgid "Yield-Widget Position"
+#~ msgstr "Yield-Widget Position"
+
+#~ msgid "Intext + Sidebar"
+#~ msgstr "Im Text + Sidebar"
+
+#~ msgid "Intext"
+#~ msgstr "Im Text"
+
+#~ msgid "Sidebar"
+#~ msgstr "Sidebar"
+
+#~ msgid "Word distance between placement (number)"
+#~ msgstr "Wort-Abstand zwischen Text-Anzeigen"
+
+#~ msgid "Max. number of links per page"
+#~ msgstr "Maximale Text-Anzeigen pro Seite"
+
+#~ msgid "Link Color"
+#~ msgstr "Link Farbe"

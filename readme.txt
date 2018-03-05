@@ -1,16 +1,16 @@
 === affilinet Performance Ads ===
 Contributors: affilinet, teraone
-Tags: affiliate marketing, online marketing, performance marketing, marketing, advertisement, advertising, advertise, affilinet, Affiliate, performance, Display, earn money, monetization, monetize, Monetarisierung, performance, Vermarktung, Banner, Geld verdienen, werbeintegration, Werbung
+Tags: Affiliate, affilinet, advertising, banner, performance marketing
 Requires at least: 3.0.1
-Tested up to: 4.6
-Stable tag: 1.8.5
+Tested up to: 4.9
+Stable tag: 1.8.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Integrate our data driven and automated performance display plugin into your WordPress platform and serve your users targeted ads in real time.
 
 == Description ==
-= English =
+
 Integrate affilinet's data driven advertising technology and automated ad display services seamlessly into your WordPress platform and serve the right message, at the right time, to the right person. Dont't worry about ad codes. This plugin will handle all technical details for you.
 
 This plugin comes with a statistic page where you can see your daily earnings. You will just have to enter your affilinet Webservice Password.
@@ -24,29 +24,6 @@ The benefits at a glance:
 We’ve made it really easy to get started. If you need integration support, please watch our tutorial on Youtube: https://www.youtube.com/watch?v=AtZHeD1CK-E
 
 If you have any questions or need support please contact us at affilinet@teraone.de
-
-= German =
-Nutzen Sie die neue Data-Driven Advertising Technologie mit automatisierter Werbemittelausspielung von affilinet, die Ihre User in Echtzeit anspricht! Mithilfe dieses Plugins wird Ihren Besuchern die richtige Werbebotschaft zur richtigen Zeit angezeigt – und das ohne jeglichen Programmieraufwand! Eine manuelle Integration des Ad Codes ist nicht erforderlich.
-
-Das affilinet Plugin für WordPress bietet Ihnen die Möglichkeit, zielgruppenadäquate Werbung ganz einfach auf der eigenen Webseite zu integrieren und so Ihren Blog oder Ihre Content-Website gezielt zu monetarisieren. Das Plugin bietet zahlreiche Auswahloptionen zur Platzierung der Banner auf der Seite. Die Werbeanzeigen lassen sich dabei ganz einfach in die Sidebar und in den Content-Bereich Ihres Blogs integrieren. Darüber hinaus bietet das Plugin eine Statistik- Funktionalität, die eine Übersicht über Ihre täglichen Einnahmen liefert.
-
-Ihre Vorteile im Überblick:
-
-* Einfache Integration von Werbung auf Ihrer Seite
-* Intelligente Werbemittelausspielung dank innovativer Data-Driven Advertising Technologie
-* Schnelle und einfache Registrierung bei affilinet
-* Mehr Relevanz für Ihre Besucher durch gezielte Werbeanzeigen
-
-So können Sie Ihren Besuchern in kürzester Zeit und ohne großen Aufwand profildatenbasierte Werbung anzeigen und mehr Sales durch höhere Relevanz der Werbeinhalte erreichen!
-
-Falls Sie noch Fragen zur genauen Integration haben, schauen Sie sich gerne unser dazugehöriges Tutorial auf Youtube an: https://www.youtube.com/watch?v=AtZHeD1CK-E
-
-Oder wenden Sie sich einfach an Ihren Ansprechpartner bei affilinet oder senden Sie eine Email an affilinet@teraone.de.
-
-
-= French =
-Profitez des avantages de notre nouvelle technologie publicitaire! Diffusez en temps réel des publicités ciblées selon le profil des internautes.
-
 
 == Installation ==
 
@@ -101,6 +78,24 @@ It may take up to 90 minutes for ads to show, additionally all publisher account
 
 
 == Changelog ==
+
+
+= 1.9.0 =
+* Release Date: March 3, 2018
+* RTB Header bidding added => increased eCPM and better Publisher Monetization
+
+
+= 1.8.7 =
+* Release Date: July 5, 2017
+* SubId can be modified with the hook 'affilinet_subid_array'
+
+= 1.8.6 =
+* Release Date: March 29, 2017
+* Change translation Text Domain
+
+= 1.8.5 =
+* Release Date: November 25, 2016
+* Minor enhancements
 
 = 1.8.4 =
 * Release Date: November 9, 2016

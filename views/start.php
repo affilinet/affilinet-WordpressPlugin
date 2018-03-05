@@ -19,4 +19,4 @@
         }
     }
 </style>
-<iframe id="startIframe" src="<?php echo __('https://www.affili.net/htmlcontent/en/Publishermodules/WordPress/Welcome.html', 'affilinet'); ?>" style=""></iframe>
+<iframe id="startIframe" src="<?php echo __('https://www.affili.net/htmlcontent/en/Publishermodules/WordPress/Welcome.html', 'affilinet-performance-module'); ?>" style=""></iframe>

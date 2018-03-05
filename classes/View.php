@@ -62,11 +62,11 @@ class Affilinet_View
 
             jQuery.plot('#graph-placeholder',
                 [
-                    {data: affilinet_report_data_views, label: "<?php _e('Views', 'affilinet'); ?>", yaxis: 1},
-                    {data: affilinet_report_data_clicks, label: "<?php _e('Clicks', 'affilinet'); ?>", yaxis: 1},
+                    {data: affilinet_report_data_views, label: "<?php _e('Views', 'affilinet-performance-module'); ?>", yaxis: 1},
+                    {data: affilinet_report_data_clicks, label: "<?php _e('Clicks', 'affilinet-performance-module'); ?>", yaxis: 1},
                     {
                         data: affilinet_report_data_total,
-                        label: "<?php _e('Open Commission', 'affilinet'); ?>",
+                        label: "<?php _e('Open Commission', 'affilinet-performance-module'); ?>",
                         yaxis: 2
                     }
                 ], options);

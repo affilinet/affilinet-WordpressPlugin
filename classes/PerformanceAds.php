@@ -52,10 +52,10 @@ class Affilinet_PerformanceAds
         $platformId = get_option('affilinet_platform');
 
         if ($publisherId === false || $publisherId === '') {
-            return __('No publisher ID given', 'affilinet');
+            return __('No publisher ID given', 'affilinet-performance-module');
         }
         if ($platformId === false || $platformId === '') {
-            return __('No platform  chosen', 'affilinet');
+            return __('No platform  chosen', 'affilinet-performance-module');
         }
 
         /**
@@ -70,11 +70,19 @@ class Affilinet_PerformanceAds
         $clickUrl = Affilinet_Helper::getClickHostnameForPlatform($platformId);
         $pluginVersion = Affilinet_Helper::get_plugin_version();
         $wpVersion =  get_bloginfo('version');
-        $subId = 'Wordpress'.$wpVersion.'-Plugin'.$pluginVersion;
+
+        $subIdArray = apply_filters('affilinet_subid_array', array('Wordpress'.$wpVersion, 'Plugin'.$pluginVersion));
+        if (is_array($subIdArray)) {
+            $subId = implode('-', $subIdArray);
+        } else {
+            $subId = 'Wordpress'.$wpVersion.'-Plugin'.$pluginVersion;
+        }
+
+
         $hnb = self::getHnbForPlatform($platformId, $size);
 
         if ($hnb === false) {
-            return __('Invalid ad size given. Choose one of "728x90","300x250","250x250","468x60","160x600","120x600"', 'affilinet');
+            return __('Invalid ad size given. Choose one of "728x90","300x250","250x250","468x60","160x600","120x600"', 'affilinet-performance-module');
         }
 
         $html = '<script language="javascript" type="text/javascript" src="' .

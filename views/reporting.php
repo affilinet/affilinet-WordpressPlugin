@@ -1,5 +1,5 @@
 <div class="wrap">
-    <h2><?php _e('Reporting', 'affilinet') ?></h2>
+    <h2><?php _e('Reporting', 'affilinet-performance-module') ?></h2>
 
     <?php
     if (get_option('affilinet_standard_webservice_password') === false
@@ -11,10 +11,10 @@
 
         ?>
         <p>
-            <?php _e('This reporting page is deactivated since you did not entered your publisher web service password on the settings page.', 'affilinet'); ?>
+            <?php _e('This reporting page is deactivated since you did not entered your publisher web service password on the settings page.', 'affilinet-performance-module'); ?>
 
-            <br><?php _e('Please provide your', 'affilinet'); ?> <a
-                href="<?php echo admin_url('admin.php?page=affilinet_settings'); ?>"><?php _e('webservice password and publisher ID', 'affilinet'); ?>
+            <br><?php _e('Please provide your', 'affilinet-performance-module'); ?> <a
+                href="<?php echo admin_url('admin.php?page=affilinet_settings'); ?>"><?php _e('webservice password and publisher ID', 'affilinet-performance-module'); ?>
         </p>
     <?php
     } else {
@@ -68,7 +68,7 @@
                     <form method="get" action="<?php echo admin_url('admin.php?page=affilinet_reporting'); ?>">
                         <div class="alignleft actions">
                             <label for="filter-by-date-month"
-                                   class="screen-reader-text"><?php _e('Select month', 'affilinet'); ?></label>
+                                   class="screen-reader-text"><?php _e('Select month', 'affilinet-performance-module'); ?></label>
                             <select name="month" id="filter-by-date-month">
                                 <?php
 
@@ -84,7 +84,7 @@
                                 ?>
                             </select>
                             <label for="filter-by-date-year"
-                                   class="screen-reader-text"><?php _e('Select year', 'affilinet'); ?></label>
+                                   class="screen-reader-text"><?php _e('Select year', 'affilinet-performance-module'); ?></label>
                             <select name="year" id="filter-by-date-year">
                                 <?php
                                 // maximum of 5 years before actual year
@@ -99,7 +99,7 @@
                             </select>
                             <input type="hidden" name="page" value="affilinet_reporting"/>
                             <input type="submit" id="post-query-submit" class="button"
-                                   value="<?php _e('Show report', 'affilinet'); ?>">
+                                   value="<?php _e('Show report', 'affilinet-performance-module'); ?>">
                         </div>
                     </form>
                     <br class="clear">
@@ -108,21 +108,21 @@
                     <thead>
                     <tr>
                         <th class="manage-column column-Date                   "
-                            scope="col"><?php _e('Date', 'affilinet'); ?></th>
+                            scope="col"><?php _e('Date', 'affilinet-performance-module'); ?></th>
                         <th class="manage-column column-Views                  "
-                            scope="col"><?php _e('Views', 'affilinet'); ?></th>
+                            scope="col"><?php _e('Views', 'affilinet-performance-module'); ?></th>
                         <th class="manage-column column-Clicks                 "
-                            scope="col"><?php _e('Clicks', 'affilinet'); ?></th>
+                            scope="col"><?php _e('Clicks', 'affilinet-performance-module'); ?></th>
                         <th class="manage-column column-OpenSalesLeads         "
-                            scope="col"><?php _e('Open SalesLeads', 'affilinet'); ?></th>
+                            scope="col"><?php _e('Open SalesLeads', 'affilinet-performance-module'); ?></th>
                         <th class="manage-column column-ConfirmedSalesLeads    "
-                            scope="col"><?php _e('Confirmed SalesLeads', 'affilinet'); ?></th>
+                            scope="col"><?php _e('Confirmed SalesLeads', 'affilinet-performance-module'); ?></th>
                         <th class="manage-column column-DeclinedSalesLeads     "
-                            scope="col"><?php _e('Declined SalesLeads', 'affilinet'); ?></th>
+                            scope="col"><?php _e('Declined SalesLeads', 'affilinet-performance-module'); ?></th>
                         <th class="manage-column column-OpenCommision          "
-                            scope="col"><?php _e('Open Commission', 'affilinet'); ?></th>
+                            scope="col"><?php _e('Open Commission', 'affilinet-performance-module'); ?></th>
                         <th class="manage-column column-ConfirmedCommission     "
-                            scope="col"><?php _e('Confirmed Commission', 'affilinet'); ?></th>
+                            scope="col"><?php _e('Confirmed Commission', 'affilinet-performance-module'); ?></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -177,7 +177,7 @@
                     } else {
                     ?>
                     <tr class="alternate">
-                        <td colspan="8" class="col center"><?php _e('No data for this month', 'affilinet'); ?></td>
+                        <td colspan="8" class="col center"><?php _e('No data for this month', 'affilinet-performance-module'); ?></td>
                         <?php
                         }
 
@@ -185,7 +185,7 @@
                     </tbody>
                     <tfoot>
                     <tr class="alternate">
-                        <th class="manage-column column-Date                   "><?php _e('Total sum', 'affilinet'); ?></th>
+                        <th class="manage-column column-Date                   "><?php _e('Total sum', 'affilinet-performance-module'); ?></th>
                         <th class="manage-column column-Views                  "><?php echo number_format_i18n($totalViews, 0); ?></th>
                         <th class="manage-column column-Clicks                 "><?php echo number_format_i18n($totalClicks, 0); ?></th>
                         <th class="manage-column column-OpenSalesLeads         "><?php echo number_format_i18n($totalOpenSales, 0); ?></th>

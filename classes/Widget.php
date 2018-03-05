@@ -29,7 +29,7 @@ class Affilinet_Widget extends \WP_Widget
         $size = $instance['size'];
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id('size'); ?>"><?php _e('Banner size', 'affilinet'); ?></label>
+            <label for="<?php echo $this->get_field_id('size'); ?>"><?php _e('Banner size', 'affilinet-performance-module'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('size'); ?>"
                     name="<?php echo $this->get_field_name('size'); ?>">
                 <?php
