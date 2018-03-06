@@ -3,7 +3,7 @@ Contributors: affilinet, teraone
 Tags: Affiliate, affilinet, advertising, banner, performance marketing
 Requires at least: 3.0.1
 Tested up to: 4.9
-Stable tag: 1.8.7
+Stable tag: 1.9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,10 +80,13 @@ It may take up to 90 minutes for ads to show, additionally all publisher account
 == Changelog ==
 
 
+= 1.9.1 =
+* Release Date: March 6, 2018
+* Updating ads.txt as needed for integration
+
 = 1.9.0 =
 * Release Date: March 3, 2018
 * RTB Header bidding added => increased eCPM and better Publisher Monetization
-
 
 = 1.8.7 =
 * Release Date: July 5, 2017
