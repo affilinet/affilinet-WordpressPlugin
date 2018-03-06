@@ -5,6 +5,8 @@ class Affilinet_Plugin
 
     public function __construct()
     {
+	    register_activation_hook( AFFILINET_PLUGIN_FILE, array( $this,  'plugin_upgraded'));
+
         add_action('admin_init', array($this, 'admin_init'));
         add_action('admin_menu', array($this, 'admin_menu'));
         add_action('widgets_init', array($this, 'register_widget'));
