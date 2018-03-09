@@ -154,6 +154,25 @@
         </table>
 
         <?php
+        if (Affilinet_Plugin::adsTxtExistsAndIsUpToDate() === false) {
+            ?>
+                <div class="wrap">
+                    <h2 class="alert">Ads.txt Error:</h2>
+                    <p>The Plugin could not create an ads.txt file in your root folder. <br>
+                        Please create a file named 'ads.txt' in your root folder (next to wp-config.php) with the following content:
+                        <br>
+                        This file is needed to improve your revenue.
+                        <a href="https://iabtechlab.com/ads-txt/" target="_blank">Details about ads.txt.</a>
+
+                    </div>
+                    <textarea cols="60" rows="10"><?php echo Affilinet_Plugin::getAdsTxtContent(); ?></textarea>
+                </div>
+
+	        <?php
+        }
+        ?>
+
+        <?php
         if ( function_exists('submit_button')) {
             submit_button();
         } else {

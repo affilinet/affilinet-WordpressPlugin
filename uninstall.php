@@ -22,6 +22,7 @@ delete_option( 'affilinet_ywidgetpos' );
 delete_option( 'affilinet_ywdensity' );
 delete_option( 'affilinet_ywcap' );
 delete_option( 'affilinet_ywcolor' );
+delete_option( 'affilinet-performance-ads-version' );
 
 
 

@@ -5,7 +5,7 @@ class Affilinet_Plugin
 
     public function __construct()
     {
-	    register_activation_hook( AFFILINET_PLUGIN_FILE, array( $this,  'plugin_upgraded'));
+
 
         add_action('admin_init', array($this, 'admin_init'));
         add_action('admin_menu', array($this, 'admin_menu'));
@@ -21,7 +21,9 @@ class Affilinet_Plugin
 
 	    add_filter( 'plugin_action_links_' .plugin_basename(AFFILINET_PLUGIN_FILE ), array( $this, 'plugin_add_settings_link' ) );
 
-	    add_action( 'upgrader_process_complete', array($this, 'plugin_upgraded'));
+
+	    // check for ads.txt
+	    $this->updateAdsTxtOnDemand();
     }
 
     function admin_notice() {
@@ -34,6 +36,17 @@ class Affilinet_Plugin
             </div>
             <?php
         }
+
+	    if (!$this->adsTxtExistsAndIsUpToDate()) {
+		    ?>
+            <div class="notice notice-warning is-dismissible">
+                <p><?php _e('<strong>affilinet Performance Ads:</strong><br> Missing ads.txt file. Please see instructions on settings page ', 'affilinet-performance-module' ); ?>
+                    <a class="button" href="admin.php?page=affilinet_settings"><?php _e('Check your settings.', 'affilinet-performance-module');?></a>
+                </p>
+            </div>
+		    <?php
+	    }
+
     }
 
 
@@ -242,31 +255,48 @@ class Affilinet_Plugin
         echo Affilinet_Yieldkit::getAdCode();
     }
 
+    public static function adsTxtExistsAndIsUpToDate() {
+	    $filePath = ABSPATH.'ads.txt';
+        return file_exists($filePath) && strpos(file_get_contents($filePath), self::getAdsTxtContent()) !== false;
+    }
 
-    public function plugin_upgraded() {
+    public function updateAdsTxtOnDemand() {
         // check for correct ads.txt
 
-        $filePath = ABSPATH.DIRECTORY_SEPARATOR.'ads.txt';
+	    $filePath = ABSPATH.'ads.txt';
 
-        $neededContent =
-            '# affilinet-performance-module-start' . PHP_EOL .
-            '# Do not modify the following lines' . PHP_EOL .
-            '# Ver. 1.9.1' . PHP_EOL .
-            'appnexus.com, 8332, RESELLER, f5ab79cb980f11d1' . PHP_EOL .
-            'appnexus.com, 8327, RESELLER, f5ab79cb980f11d1' . PHP_EOL .
-            'appnexus.com, 8334, RESELLER, f5ab79cb980f11d1' . PHP_EOL .
-            'appnexus.com, 8333, RESELLER, f5ab79cb980f11d1'. PHP_EOL .
-            '# affilinet-performance-module-end' . PHP_EOL;
-
-        if (file_exists($filePath)) {
-            $adsTxtFile = file_get_contents($filePath);
-            if (strpos($adsTxtFile, $neededContent) === false) {
-                // write to file
-                file_put_contents($filePath, PHP_EOL . $neededContent, FILE_APPEND);
-            }
-        }else {
-            file_put_contents($filePath, $neededContent, FILE_APPEND);
+	    if (!$this->adsTxtExistsAndIsUpToDate()) {
+	        $this->writeAdsTxt($filePath, $this->getAdsTxtContent());
         }
+
+    }
+
+    public static function getAdsTxtContent() {
+        return '# affilinet-performance-module-start' . PHP_EOL .
+               '# Do not modify the following lines' . PHP_EOL .
+               '# Ver. 1.9.1' . PHP_EOL .
+               'appnexus.com, 8332, RESELLER, f5ab79cb980f11d1' . PHP_EOL .
+               'appnexus.com, 8327, RESELLER, f5ab79cb980f11d1' . PHP_EOL .
+               'appnexus.com, 8334, RESELLER, f5ab79cb980f11d1' . PHP_EOL .
+               'appnexus.com, 8333, RESELLER, f5ab79cb980f11d1'. PHP_EOL .
+               '# affilinet-performance-module-end' . PHP_EOL;
+    }
+
+    private function writeAdsTxt($filePath, $content) {
+
+	    try
+	    {
+		    $fp = @fopen($filePath, "a+");
+		    if ( !$fp ) {
+			    throw new Exception('File open failed.');
+		    }
+		    @fwrite($fp, $content);
+		    @fclose($fp);
+
+
+	    } catch ( Exception $e ) {
+		    // no output intended
+	    }
 
     }
 

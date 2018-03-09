@@ -3,7 +3,7 @@ Contributors: affilinet, teraone
 Tags: Affiliate, affilinet, advertising, banner, performance marketing
 Requires at least: 3.0.1
 Tested up to: 4.9
-Stable tag: 1.9.2
+Stable tag: 1.9.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -79,6 +79,13 @@ It may take up to 90 minutes for ads to show, additionally all publisher account
 
 == Changelog ==
 
+= 1.9.4 =
+* Release Date: March 9, 2018
+* Fix: Suppress warnings on file write for ads.txt
+
+= 1.9.3 =
+* Release Date: March 6, 2018
+* Fix: Update ads.txt on Plugin version change
 
 = 1.9.2 =
 * Release Date: March 6, 2018
