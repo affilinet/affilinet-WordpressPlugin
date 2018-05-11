@@ -2,8 +2,8 @@
 Contributors: affilinet, teraone
 Tags: Affiliate, affilinet, advertising, banner, performance marketing
 Requires at least: 3.0.1
-Tested up to: 4.9
-Stable tag: 1.9.4
+Tested up to: 5.0
+Stable tag: 1.9.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,10 @@ It may take up to 90 minutes for ads to show, additionally all publisher account
 
 
 == Changelog ==
+
+= 1.9.5 =
+* Release Date: May 11, 2018
+* Fix: Nusoap as a fallback if Soap Extension is missing
 
 = 1.9.4 =
 * Release Date: March 9, 2018
